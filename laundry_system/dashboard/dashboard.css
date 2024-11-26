@@ -997,7 +997,7 @@ input[type="checkbox"] {
 
 /*modal outside color*/
 .modal-backdrop.show {
-  background-color: rgba(0, 0, 0, 0.37); /* Adjust the alpha value for the transparency level (0.3 means 30% opacity) */
+  background-color: rgba(0, 0, 0, 0.37); 
 }
 
 /* Media Queries for Responsiveness */
@@ -1016,4 +1016,25 @@ input[type="checkbox"] {
       font-size: 1.2rem;
       margin-top: 10px;
   }
+}
+
+.swal-confirm-btn {
+  background-color: #3085d6; /*'Yes' */
+  border-color: #3085d6;
+}
+
+.swal-cancel-btn {
+  background-color: rgb(255, 118, 118); /*'No' */
+  border-color:  rgb(255, 118, 118);
+}
+
+
+.swal-confirm-btn:hover {
+  background-color: #357abd;
+  border-color: #357abd;
+}
+
+.swal-cancel-btn:hover {
+  background-color: #c9524d; 
+  border-color: #c9524d;
 }

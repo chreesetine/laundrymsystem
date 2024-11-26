@@ -294,25 +294,66 @@ $('.pickup-checkbox').on('change', function() {
         var customerId = $checkbox.data('id');
         var remark = $checkbox.data('remark');
 
-        $.ajax({
-            url: 'update_remark.php',
-            type: 'POST',
-            data: {
-                customer_id: customerId,
-                remark: remark,
-                type: 'pickup' 
-            },
-            success: function(response) {
-                console.log(response);  
-                if (response === "Success") {
-                    $checkbox.closest('.notification-item').remove(); 
-                    updateActiveCounts();  
-                } else {
-                    alert('Error: ' + response);  
+        // $.ajax({
+        //     url: 'update_remark.php',
+        //     type: 'POST',
+        //     data: {
+        //         customer_id: customerId,
+        //         remark: remark,
+        //         type: 'pickup' 
+        //     },
+        //     success: function(response) {
+        //         console.log(response);  
+        //         if (response === "Success") {
+        //             $checkbox.closest('.notification-item').remove(); 
+        //             updateActiveCounts();  
+        //         } else {
+        //             alert('Error: ' + response);  
+        //         }
+        //     },
+        //     error: function(xhr, status, error) {
+        //         alert("AJAX Error: " + error);  
+        //     }
+        // });
+
+            Swal.fire({
+                title: 'Are you sure?',
+                text: 'Do you want to mark this as ' + remark + '?',
+                icon: 'warning',
+                showCancelButton: true,
+                confirmButtonText: 'Yes',
+                cancelButtonText: 'No',
+                reverseButtons: true,
+                customClass: {
+                    confirmButton: 'swal-confirm-btn',
+                    cancelButton: 'swal-cancel-btn'
                 }
-            },
-            error: function(xhr, status, error) {
-                alert("AJAX Error: " + error);  
+            }).then((result) => {
+                if (result.isConfirmed) {
+            
+                $.ajax({
+                    url: 'update_remark.php',
+                    type: 'POST',
+                    data: {
+                        customer_id: customerId,
+                        remark: remark,
+                        type: 'pickup'  
+                    },
+                    success: function(response) {
+                        console.log('Response from update_remark.php:', response); 
+
+                
+                        if (remark === 'Claimed' || remark === 'Undelivered' || remark === 'Unclaimed' || remark === 'Pending') {
+                            $checkbox.closest('.notification-item').remove(); 
+                            updatePickupRemarks();  
+                        }
+                    },
+                    error: function(xhr, status, error) {
+                        console.error('AJAX error:', error); 
+                    }
+                });
+            } else {
+                $checkbox.prop('checked', !$checkbox.prop('checked'));
             }
         });
     });
@@ -323,26 +364,72 @@ $('.pickup-checkbox').on('change', function() {
         var customerId = $checkbox.data('id');
         var remark = $checkbox.data('remark');
 
-        $.ajax({
-            url: 'update_remark.php',
-            type: 'POST',
-            data: {
-                customer_id: customerId,
-                remark: remark,
-                type: 'delivery'
-            },
-            success: function(response) {
-                console.log(response);  
-                if (response === "Success") {
+        // $.ajax({
+        //     url: 'update_remark.php',
+        //     type: 'POST',
+        //     data: {
+        //         customer_id: customerId,
+        //         remark: remark,
+        //         type: 'delivery'
+        //     },
+        //     success: function(response) {
+        //         console.log(response);  
+        //         if (response === "Success") {
                     
-                    $checkbox.closest('.notification-item').remove(); 
-                    updateActiveCounts();  
-                } else {
-                    alert('Error: ' + response);  
-                }
-            },
-            error: function(xhr, status, error) {
-                alert("AJAX Error: " + error);  
+        //             $checkbox.closest('.notification-item').remove(); 
+        //             updateActiveCounts();  
+        //         } else {
+        //             alert('Error: ' + response);  
+        //         }
+        //     },
+        //     error: function(xhr, status, error) {
+        //         alert("AJAX Error: " + error);  
+        //     }
+        // });
+        var $checkbox = $(this);  
+        var customerId = $checkbox.data('id');
+        var remark = $checkbox.data('remark');
+
+    
+        Swal.fire({
+            title: 'Are you sure?',
+            text: 'Do you want to mark this as ' + remark + '?',
+            icon: 'warning',
+            showCancelButton: true,
+            confirmButtonText: 'Yes',
+            cancelButtonText: 'No',
+            reverseButtons: true,
+            customClass: {
+                confirmButton: 'swal-confirm-btn',
+                cancelButton: 'swal-cancel-btn'
+            }
+            }).then((result) => {
+                if (result.isConfirmed) {
+        
+                $.ajax({
+                    url: 'update_remark.php',
+                    type: 'POST',
+                    data: {
+                        customer_id: customerId,
+                        remark: remark,
+                        type: 'delivery'
+                    },
+                    success: function(response) {
+                        console.log('Response from update_remark.php:', response);
+
+                    
+                        if (remark === 'Delivered' || remark === 'Undelivered' || remark === 'Unclaimed' || remark === 'Pending') {
+                            $checkbox.closest('.notification-item').remove(); 
+                            updateDeliveryRemarks();  
+                        }
+                    },
+                    error: function(xhr, status, error) {
+                        console.error('AJAX error:', error);
+                    }
+                });
+            } else {
+            
+                $checkbox.prop('checked', !$checkbox.prop('checked'));
             }
         });
     });
