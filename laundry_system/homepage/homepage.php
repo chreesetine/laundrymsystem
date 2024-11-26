@@ -453,6 +453,7 @@ $conn->close();
                                     <th>Quantity</th>
                                     <th>Weight</th>
                                     <th>Price</th>
+                                    <th>Subtotal</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -691,9 +692,6 @@ $conn->close();
         invoiceText += service + " " + category; // Use <br> for line break in HTML
         invoiceText += quantity + weight + price + "\n"; // Use <br> for line break in HTML
     });
-
-
-
             invoiceText += 
                 "-----------------------------\n" +
                 "Service Type: " + serviceType + "\n" +

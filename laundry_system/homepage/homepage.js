@@ -970,6 +970,7 @@ $("#btnDone_service").click(function(event) {
                     var orders = JSON.parse(sessionStorage.getItem('orders')) || [];
 
                     orders.forEach(order => {
+                        let subTotal = order.weight * order.price;
                         var serviceRow = `
                             <tr>
                                 <td>${order.serviceOption}</td>
@@ -985,12 +986,12 @@ $("#btnDone_service").click(function(event) {
                     if ($('#services-table tbody tr.additional-fees').length === 0) {
                         var additionalFeesRow = `
                             <tr class="additional-fees">
-                                <td colspan="4">Delivery Fee</td>
+                                <td colspan="5">Delivery Fee</td>
                                 <td>P${deliveryFee.toFixed(2)}</td>
                             </tr>
-                            ${isRush === 'Rush' ? `<tr class="additional-fees"><td colspan="4">Rush Fee</td><td>P${rushFee.toFixed(2)}</td></tr>` : ''}
+                            ${isRush === 'Rush' ? `<tr class="additional-fees"><td colspan="5">Rush Fee</td><td>P${rushFee.toFixed(2)}</td></tr>` : ''}
                             <tr class="additional-fees">
-                                <td colspan="4"><strong>Total Amount</strong></td>
+                                <td colspan="5"><strong>Total Amount</strong></td>
                                 <td><strong>P${finalTotalAmount.toFixed(2)}</strong></td>
                             </tr>
                         `;

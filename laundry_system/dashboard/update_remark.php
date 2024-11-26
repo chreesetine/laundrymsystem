@@ -18,7 +18,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $remark = $_POST['remark'];
     $type = $_POST['type']; 
 
-    if (in_array($remark, ['Pending', 'Undelivered', 'Unclaimed'])) { 
+    if (in_array($remark, ['pending', 'undelivered', 'unclaimed'])) { 
         // Update request date to the next day
         $new_date = date('Y-m-d', strtotime('tomorrow'));  // Get tomorrow's date
         $sql = "UPDATE service_request SET request_date = '$new_date' WHERE customer_id = $customer_id";

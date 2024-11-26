@@ -29,7 +29,7 @@ $pickup_sql = "SELECT sr.customer_name, sr.customer_id,
     tr.customer_address, tr.brgy, tr.total_amount
     FROM service_request sr
     JOIN transaction tr ON sr.request_id = tr.request_id
-    WHERE sr.remarks IN ('Unclaimed', 'Pending')
+    WHERE sr.remarks IN ('unclaimed', 'pending')
     AND tr.service_option_name = 'Customer Pick-Up'
     AND sr.request_date <= CURRENT_TIMESTAMP
     GROUP BY sr.customer_name, sr.customer_id, sr.request_date, sr.remarks, 
@@ -43,7 +43,7 @@ $delivery_sql = "SELECT sr.customer_name, sr.customer_id,
     tr.customer_address, tr.brgy, tr.total_amount
     FROM service_request sr
     JOIN transaction tr ON sr.request_id = tr.request_id
-    WHERE sr.remarks IN ('Undelivered', 'Pending') 
+    WHERE sr.remarks IN ('undelivered', 'pending') 
     AND tr.service_option_name = 'Delivery'
     AND sr.request_date <= CURRENT_DATE
     GROUP BY sr.customer_name, sr.customer_id, sr.request_date, sr.remarks, 
@@ -57,7 +57,7 @@ $rush_sql = "SELECT sr.customer_name, sr.customer_id,
     tr.customer_address, tr.brgy, tr.total_amount
     FROM service_request sr
     JOIN transaction tr ON sr.request_id = tr.request_id
-    WHERE sr.remarks IN ('Undelivered', 'Unclaimed', 'Pending')
+    WHERE sr.remarks IN ('undelivered', 'unclaimed', 'pending')
     AND tr.laundry_cycle = 'Rush'
     AND sr.request_date <= CURRENT_DATE
     GROUP BY sr.customer_name, sr.customer_id, sr.request_date, sr.remarks, 
@@ -480,7 +480,7 @@ $rush_count = $rush_result->num_rows;
                         //     die("Connection failed: " . $conn->connect_error);
                         // }
 
-                        $query = "SELECT sr.request_id, sr.laundry_service_option, sr.request_date, sr.service_request_date, c.customer_name, t.service_option_name, t.laundry_cycle
+                        $query = "SELECT sr.request_id, sr.laundry_service_option, sr.request_date, sr.service_request_date, c.customer_name, t.service_option_name, t.laundry_cycle, sr.remarks
                                 FROM service_request sr 
                                 INNER JOIN transaction t ON sr.request_id = t.request_id
                                 JOIN customer c ON sr.customer_id = c.customer_id
@@ -501,6 +501,7 @@ $rush_count = $rush_result->num_rows;
                             'laundry_cycle' => $row['laundry_cycle'],
                             'start' => $row['service_request_date'],
                             'end' => $row['request_date'],
+                            'remarks' => $row['remarks'],
                         );
                     }
 
@@ -509,7 +510,6 @@ $rush_count = $rush_result->num_rows;
                     ?>
 
                     <script>
-
                         const calendar = document.querySelector(".calendar"),
                             date = document.querySelector(".date"),
                             daysContainer = document.querySelector(".days"),
@@ -644,6 +644,7 @@ $rush_count = $rush_result->num_rows;
                                                 <span>Laundry Cycle: ${event.laundry_cycle}</span>
                                                 <span>Start: ${event.start}</span>
                                                 <span>End: ${event.end}</span>
+                                                <span>Remarks: ${event.remarks}</span>
                                             </div>
                                         </div>
                                     `;
