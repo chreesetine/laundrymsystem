@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 23, 2024 at 10:01 AM
+-- Generation Time: Nov 27, 2024 at 10:23 AM
 -- Server version: 10.4.27-MariaDB
 -- PHP Version: 8.1.12
 
@@ -45,7 +45,10 @@ INSERT INTO `archived_category` (`archive_id`, `category_id`, `laundry_category_
 (4, 5, 'Mushroom', '2024-11-15 02:21:46'),
 (5, 6, 'Socks', '2024-11-15 02:23:15'),
 (6, 8, 'Scarf', '2024-11-15 02:28:49'),
-(7, 7, 'Headband', '2024-11-15 06:37:24');
+(7, 7, 'Headband', '2024-11-15 06:37:24'),
+(8, 14, 'Stuff toy', '2024-11-25 13:29:27'),
+(9, 15, 'shoes', '2024-11-25 23:54:37'),
+(10, 16, 'shoes', '2024-11-25 23:55:47');
 
 -- --------------------------------------------------------
 
@@ -96,7 +99,12 @@ INSERT INTO `archived_customers` (`archive_id`, `customer_id`, `customer_name`, 
 (26, 108, '134', '09123134345', 'bulacan', 'sjdm', '132131', 'Gaya-gaya', '2024-11-15 02:15:58'),
 (27, 107, '234', '09462342645', 'bulacan', 'sjdm', 'test2', 'Gumaoc East', '2024-11-15 02:40:31'),
 (28, 111, 'patient1', '09123142353', 'bulacan', 'sjdm', 'bsu', 'Kaypian', '2024-11-15 07:38:57'),
-(29, 116, '3E', '09123123131', 'bulacan', 'sjdm', 'BSU', 'Kaypian', '2024-11-15 08:14:57');
+(29, 116, '3E', '09123123131', 'bulacan', 'sjdm', 'BSU', 'Kaypian', '2024-11-15 08:14:57'),
+(30, 125, 'Sza Basillio Ibarra', '09475348888', '', '', '', '', '2024-11-25 16:13:41'),
+(31, 126, 'Cueshe', '09395875878', '', '', 'pasensya na', '', '2024-11-25 23:20:56'),
+(32, 106, '2342rthrthgrt', '09463242342', '', '', 'test1', '', '2024-11-25 23:28:06'),
+(33, 52, 'Pink Sweat', '22222222222', '', '', 'Cypress', '', '2024-11-25 23:28:56'),
+(34, 41, 'Liam ', '44444444444', '', '', 'Argentina', '', '2024-11-27 04:19:48');
 
 -- --------------------------------------------------------
 
@@ -119,7 +127,10 @@ INSERT INTO `archived_service` (`archive_id`, `service_id`, `laundry_service_opt
 (1, 5, 'Dry only', '2024-09-16 17:24:16'),
 (2, 4, 'Wash only', '2024-09-18 10:47:12'),
 (3, 7, 'Shoe clean', '2024-11-12 07:27:59'),
-(4, 9, 'Pressed', '2024-11-15 02:33:39');
+(4, 9, 'Pressed', '2024-11-15 02:33:39'),
+(5, 15, 'Wash/Dry', '2024-11-25 13:28:57'),
+(6, 16, 'Shoe clean', '2024-11-25 23:54:31'),
+(7, 17, 'Shoe clean', '2024-11-25 23:55:41');
 
 -- --------------------------------------------------------
 
@@ -170,7 +181,9 @@ INSERT INTO `archived_users` (`archive_id`, `user_id`, `username`, `first_name`,
 (27, 86, 'AllanaPascual', 'Allana', 'Pascual', 'admin', '2024-11-19 15:27:35'),
 (28, 87, 'MarielLapinig', 'Mariel', 'Lapinig', 'admin', '2024-11-19 15:28:27'),
 (29, 88, 'YielLapinig', 'Yiel', 'Lapinig', 'admin', '2024-11-19 15:33:17'),
-(30, 89, 'deynn', 'Danielle', 'Dela Cruz', 'admin', '2024-11-20 14:18:22');
+(30, 89, 'deynn', 'Danielle', 'Dela Cruz', 'admin', '2024-11-20 14:18:22'),
+(31, 91, 'villagar55', 'Denise', 'Villagar', 'staff', '2024-11-25 13:27:11'),
+(32, 92, 'nisenise5555', 'nisenise', 'lobos', 'admin', '2024-11-25 23:52:11');
 
 -- --------------------------------------------------------
 
@@ -191,11 +204,7 @@ INSERT INTO `category` (`category_id`, `laundry_category_option`) VALUES
 (1, 'Clothes/Table Napkins/Pillowcase'),
 (2, 'Bedsheet/Table Cloths/Curtain'),
 (3, 'Comforter/Bath towel'),
-(9, 'Stuff toy'),
-(10, 'shoes'),
-(11, 'blanket'),
-(12, 'slippers'),
-(13, 'dollars');
+(17, 'sneakers');
 
 -- --------------------------------------------------------
 
@@ -224,13 +233,11 @@ INSERT INTO `customer` (`customer_id`, `customer_name`, `contact_number`, `provi
 (35, 'christine', '82828228288', '', '', '', ''),
 (37, 'Idowl', '09123457899', '', '', '', ''),
 (38, 'Hatig', '09123456789', '', '', '', ''),
-(41, 'Liam ', '44444444444', '', '', 'Argentina', ''),
 (44, 'Kristine', '43442424234', '', '', '', ''),
 (45, 'Kristine', '43535345334', '', '', '', ''),
 (46, 'Kristine', '34343324423', '', '', '', ''),
 (47, 'Kristine', '23456576876', '', '', '', ''),
 (48, 'Cristine', '11111111111', '', '', 'SJDM', ''),
-(52, 'Pink Sweat', '22222222222', '', '', 'Cypress', ''),
 (53, 'adi', '90000000000', '', '', '', ''),
 (54, 'tobi', '88888888888', '', '', 'verde green', ''),
 (55, 'tiiin', '89687998787', '', '', 'sjdm', ''),
@@ -277,7 +284,6 @@ INSERT INTO `customer` (`customer_id`, `customer_name`, `contact_number`, `provi
 (103, 'Rudolf Magallanes', '09098989898', '', '', '', ''),
 (104, 'Alexis Brown', '09898986557', '', '', '', ''),
 (105, 'Mandry Moore', '09878787877', 'bulacan', 'sjdm', 'Sunflower st.', 'Tungkong Mangga'),
-(106, '2342rthrthgrt', '09463242342', 'bulacan', 'sjdm', 'test1', 'Gaya-gaya'),
 (109, 'Reliza Gatchalian', '09123324356', 'bulacan', 'sjdm', 'Sarmiento', 'Kaypian'),
 (110, 'Reliza Gatchalian', '09765678768', '', '', '', ''),
 (112, 'Claire', '09134141424', 'bulacan', 'sjdm', 'bsu', 'Kaypian'),
@@ -286,10 +292,17 @@ INSERT INTO `customer` (`customer_id`, `customer_name`, `contact_number`, `provi
 (115, 'Michael', '09234245456', 'bulacan', 'sjdm', 'bsu', 'Gaya-gaya'),
 (117, 'Winnie Pooh', '09898900009', 'bulacan', 'sjdm', 'Citiville', 'Tungkong Mangga'),
 (118, 'Sadie Sink', '09989898989', 'bulacan', 'sjdm', 'Hollywood Street', 'Muzon South'),
-(119, 'Christian Serratos', '09089898909', 'bulacan', 'sjdm', 'Gumamela street', 'Muzon South'),
+(119, 'Christian Serratos', '09089898909', 'bulacan', 'sjdm', 'Gumamela Street', 'Muzon South'),
 (120, 'Glinda', '09009009909', 'bulacan', 'sjdm', 'Oz University heights', 'San Roque'),
 (121, 'Elphaba', '09090890000', 'bulacan', 'sjdm', 'Oz University Heights\n', 'Kaybanban'),
-(122, 'Marcella Santos', '09090000000', '', '', '', '');
+(122, 'Marcella Santos', '09090000000', '', '', '', ''),
+(123, 'Migoy Dela Cruz', '09090899099', 'bulacan', 'sjdm', 'Sarmiento street', 'Kaypian'),
+(124, 'Barry Keoghan', '09908867904', 'bulacan', 'sjdm', 'Pulang Dos Subdivision', 'Maharlika'),
+(127, 'Taylor Swap', '09503984594', 'bulacan', 'sjdm', 'cornelia street', 'Maharlika'),
+(128, 'Elvis', '09387887432', '', '', '', ''),
+(129, 'Eleanor Palomo', '09089987897', 'bulacan', 'sjdm', 'Sarmiento campus', 'Gumaoc East'),
+(130, 'Alexis Aballa', '09898987878', 'bulacan', 'sjdm', 'Sarmiento', 'Gaya-gaya'),
+(131, 'Marie Dela Cruz', '09987675789', 'bulacan', 'sjdm', 'Sarmiento', 'Gaya-gaya');
 
 -- --------------------------------------------------------
 
@@ -329,13 +342,7 @@ INSERT INTO `service` (`service_id`, `laundry_service_option`) VALUES
 (1, 'Wash/Dry/Fold'),
 (2, 'Wash/Dry/Press'),
 (3, 'Dry only'),
-(6, 'Wash only'),
-(8, 'Press'),
-(10, 'Press only'),
-(11, 'shoes'),
-(12, 'dry only'),
-(13, 'FOLD ONLY'),
-(14, 'money laundering');
+(18, 'shoes wash only');
 
 -- --------------------------------------------------------
 
@@ -368,7 +375,10 @@ INSERT INTO `service_category_price` (`id`, `service_id`, `category_id`, `price`
 (11, 11, 10, '50.00'),
 (12, 12, 11, '51.00'),
 (13, 13, 12, '25.00'),
-(14, 14, 13, '6000.00');
+(14, 14, 13, '6000.00'),
+(15, 16, 15, '100.00'),
+(16, 16, 3, '100.00'),
+(17, 18, 17, '55.00');
 
 -- --------------------------------------------------------
 
@@ -410,7 +420,7 @@ CREATE TABLE `service_option_price` (
 
 INSERT INTO `service_option_price` (`option_price_id`, `option_id`, `d_categoryID`, `service_option_type`, `price`) VALUES
 (1, 1, 1, 'Delivery (outside gaya-gaya)', '50.00'),
-(3, 3, 0, 'Rush', '25.00'),
+(3, 3, 0, 'Rush', '50.00'),
 (4, 1, 2, 'Delivery (within gaya-gaya)', '25.00');
 
 -- --------------------------------------------------------
@@ -436,7 +446,7 @@ CREATE TABLE `service_request` (
   `service_request_date` date NOT NULL DEFAULT current_timestamp(),
   `service_req_time` time NOT NULL DEFAULT current_timestamp(),
   `order_status` enum('completed','active','cancelled') NOT NULL DEFAULT 'active',
-  `remarks` enum('pending','delivered','undelivered','claimed','unclaimed') DEFAULT 'pending'
+  `remarks` enum('Pending','Delivered','Undelivered','Claimed','Unclaimed') DEFAULT 'Pending'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
@@ -444,119 +454,130 @@ CREATE TABLE `service_request` (
 --
 
 INSERT INTO `service_request` (`request_id`, `customer_id`, `customer_order_id`, `customer_name`, `contact_number`, `service_id`, `laundry_service_option`, `category_id`, `laundry_category_option`, `quantity`, `weight`, `price`, `request_date`, `service_request_date`, `service_req_time`, `order_status`, `remarks`) VALUES
-(1, 16, '0', 'dsfs', '32434242224', 1, 'Wash/Dry/Fold', 1, 'Clothes/Table Napkins/Pillowcase', 5, '5.00', '35.00', '2024-09-04', '2024-09-01', '21:01:52', '', 'delivered'),
-(2, 17, '0', 'rd', '98767546789', 1, 'Wash/Dry/Fold', 1, 'Clothes/Table Napkins/Pillowcase', 2, '7.00', '35.00', '0000-00-00', '2024-09-01', '21:01:52', '', 'delivered'),
-(3, 18, '0', 'roi', '98767546786', 1, 'Wash/Dry/Fold', 3, 'Comforter/Bath towel\r\n', 7, '18.00', '65.00', '2024-09-04', '2024-09-01', '21:01:52', 'completed', 'delivered'),
-(4, 19, '0', 'tun', '87654367890', 1, 'Wash/Dry/Fold', 2, 'Bedsheet/Table Cloths/Curtain\r\n', 3, '6.00', '55.00', '0000-00-00', '2024-09-01', '21:01:52', 'cancelled', 'delivered'),
-(5, 20, '0', 'dsgs', '43567890765', 1, 'Wash/Dry/Fold', 2, 'Bedsheet/Table Cloths/Curtain\r\n', 5, '20.00', '55.00', '0000-00-00', '2024-09-06', '21:01:52', 'cancelled', 'delivered'),
-(6, 21, '0', 'chris', '34565432345', 3, 'Dry only', 3, 'Comforter/Bath towel\r\n', 3, '6.00', '55.00', '0000-00-00', '2024-09-06', '21:01:52', 'active', 'delivered'),
-(7, 22, '0', 'vanilla', '23456645654', 2, 'Wash/Dry/Press', 1, 'Clothes/Table Napkins/Pillowcase', 8, '7.00', '80.00', '2024-09-20', '2024-09-17', '00:15:01', 'completed', 'delivered'),
-(8, 23, '0', 'ming', '34567654321', 2, 'Wash/Dry/Press', 2, 'Bedsheet/Table Cloths/Curtain\r\n', 6, '6.00', '100.00', '2024-09-20', '2024-09-17', '00:32:52', 'completed', 'delivered'),
-(9, 24, '0', 'christine', '09997852239', 2, 'Wash/Dry/Press', 2, 'Bedsheet/Table Cloths/Curtain\r\n', 6, '6.00', '100.00', '2024-09-23', '2024-09-20', '17:54:59', 'completed', 'delivered'),
-(10, 24, '0', 'christine', '09997852239', 1, 'Wash/Dry/Fold', 2, 'Bedsheet/Table Cloths/Curtain\r\n', 5, '7.00', '55.00', '2024-09-23', '2024-09-20', '18:17:59', 'completed', 'delivered'),
-(11, 25, '0', 'tintin', '09059748294', 3, 'Dry only', 3, 'Comforter/Bath towel\r\n', 7, '6.00', '55.00', '2024-09-23', '2024-09-20', '18:26:02', 'completed', 'delivered'),
-(12, 25, '0', 'tintin', '09059748294', 1, 'Wash/Dry/Fold', 1, 'Clothes/Table Napkins/Pillowcase', 4, '5.00', '35.00', '2024-09-23', '2024-09-20', '18:26:02', 'completed', 'delivered'),
-(13, 26, '0', 'winnie', '53459876574', 1, 'Wash/Dry/Fold', 2, 'Bedsheet/Table Cloths/Curtain\r\n', 4, '6.00', '55.00', '2024-09-23', '2024-09-20', '21:18:18', 'completed', 'delivered'),
-(14, 27, '0', 'milky', '33325253252', 2, 'Wash/Dry/Press', 2, 'Bedsheet/Table Cloths/Curtain\r\n', 5, '6.00', '100.00', '2024-09-25', '2024-09-22', '21:18:02', 'completed', 'delivered'),
-(15, 24, '', 'Christine', '09997852239', 2, 'Wash/Dry/Press', 1, 'Clothes/Table Napkins/Pillowcase', 4, '7.00', '80.00', '0000-00-00', '2024-09-28', '22:50:13', 'cancelled', 'delivered'),
-(17, 28, '', 'frf', '34567897654', 1, 'Wash/Dry/Fold', 2, 'Bedsheet/Table Cloths/Curtain\r\n', 6, '7.00', '55.00', '0000-00-00', '2024-09-30', '15:38:52', 'cancelled', 'delivered'),
-(18, 29, '', 'denise', '22220000000', 1, 'Wash/Dry/Fold', 2, 'Bedsheet/Table Cloths/Curtain\r\n', 2, '5.00', '55.00', '2024-09-28', '2024-09-30', '15:43:15', 'completed', 'delivered'),
-(21, 31, 'order_66fa5b508b935', 'nitinit', '50000000000', 1, 'Wash/Dry/Fold', 2, 'Bedsheet/Table Cloths/Curtain\r\n', 1, '6.00', '55.00', '2024-09-30', '2024-09-30', '16:03:28', 'completed', 'delivered'),
-(22, 18, 'order_66fa5c9080943', 'roi', '80000000000', 2, 'Wash/Dry/Press', 2, 'Bedsheet/Table Cloths/Curtain\r\n', 1, '7.00', '100.00', '2024-09-30', '2024-09-30', '16:08:48', 'completed', 'delivered'),
-(23, 33, 'order_66fa5cd4099d7', 'nitnit lomi', '80000888888', 1, 'Wash/Dry/Fold', 2, 'Bedsheet/Table Cloths/Curtain\r\n', 2, '5.00', '55.00', '0000-00-00', '2024-09-30', '16:09:56', 'cancelled', 'delivered'),
-(24, 33, 'order_66fa5d5c78310', 'nitnit lomi', '70000000000', 1, 'Wash/Dry/Fold', 1, 'Clothes/Table Napkins/Pillowcase', 2, '6.00', '35.00', '2024-09-28', '2024-09-30', '16:12:12', 'completed', 'delivered'),
-(25, 33, 'order_66fa5d5c78310', 'nitnit lomi', '70000000000', 2, 'Wash/Dry/Press', 1, 'Clothes/Table Napkins/Pillowcase', 1, '6.00', '80.00', '2024-09-28', '2024-09-30', '16:12:12', 'completed', 'delivered'),
-(26, 24, 'order_66fd2c6e35fe1', 'christine', '82828228288', 2, 'Wash/Dry/Press', 2, 'Bedsheet/Table Cloths/Curtain\r\n', 6, '7.00', '100.00', '2024-10-02', '2024-10-02', '19:20:14', 'completed', 'delivered'),
-(27, 36, 'ord_6703ed88000fa', 'Christinee', '09951273842', 1, 'Wash/Dry/Fold', 3, 'Comforter/Bath towel\r\n', 3, '8.00', '65.00', '2024-10-07', '2024-10-07', '22:17:44', 'completed', 'delivered'),
-(28, 37, 'ord_670f2750b0128', 'Idowl', '09123457899', 3, 'Dry only', 1, 'Clothes/Table Napkins/Pillowcase', 1, '20.00', '35.00', '0000-00-00', '2024-10-16', '10:39:12', 'cancelled', 'delivered'),
-(29, 41, 'ord_67132a9f8e8a9', 'Liam ', '44444444444', 1, 'Wash/Dry/Fold', 2, 'Bedsheet/Table Cloths/Curtain\r\n', 4, '10.00', '55.00', '2024-10-19', '2024-10-19', '11:42:23', 'completed', 'delivered'),
-(30, 42, 'ord_67191dff2f712', 'Kristine', '65644564564', 1, 'Wash/Dry/Fold', 1, 'Clothes/Table Napkins/Pillowcase', 4, '10.00', '35.00', '2024-10-24', '2024-10-24', '00:02:07', 'completed', 'delivered'),
-(31, 42, 'ord_671925e957323', 'Kristine', '43442424234', 2, 'Wash/Dry/Press', 2, 'Bedsheet/Table Cloths/Curtain\r\n', 5, '5.00', '100.00', '2024-10-24', '2024-10-24', '00:35:53', 'completed', 'delivered'),
-(32, 42, 'ord_671925e957323', 'Kristine', '43535345334', 2, 'Wash/Dry/Press', 1, 'Clothes/Table Napkins/Pillowcase', 2, '5.00', '80.00', '2024-10-24', '2024-10-24', '00:35:53', 'completed', 'delivered'),
-(33, 42, 'ord_671925e957323', 'Kristine', '43535345334', 2, 'Wash/Dry/Press', 2, 'Bedsheet/Table Cloths/Curtain\r\n', 6, '6.00', '100.00', '2024-10-24', '2024-10-24', '00:35:53', 'completed', 'delivered'),
-(34, 42, 'ord_671931b845adb', 'Kristine', '34343324423', 1, 'Wash/Dry/Fold', 1, 'Clothes/Table Napkins/Pillowcase', 6, '10.00', '35.00', '2024-10-24', '2024-10-24', '01:26:16', 'completed', 'delivered'),
-(35, 42, 'ord_6719a82daae51', 'Kristine', '23456576876', 1, 'Wash/Dry/Fold', 1, 'Clothes/Table Napkins/Pillowcase', 1, '5.00', '35.00', '2024-10-24', '2024-10-24', '09:51:41', 'completed', 'delivered'),
-(36, 48, 'ord_6719a8bc89519', 'Cristine', '11111111111', 1, 'Wash/Dry/Fold', 1, 'Clothes/Table Napkins/Pillowcase', 2, '5.00', '35.00', '2024-10-24', '2024-10-24', '09:54:04', 'completed', 'delivered'),
-(37, 48, 'ord_6719a8bc89519', 'Cristine', '11111111111', 2, 'Wash/Dry/Press', 2, 'Bedsheet/Table Cloths/Curtain\r\n', 3, '6.00', '100.00', '2024-10-24', '2024-10-24', '09:54:04', 'completed', 'delivered'),
-(38, 49, 'ord_6721e19056af1', 'Gwen', '42343435345', 2, 'Wash/Dry/Press', 2, 'Bedsheet/Table Cloths/Curtain\r\n', 6, '6.00', '100.00', '2024-11-02', '2024-10-30', '15:34:40', 'completed', 'delivered'),
-(39, 50, 'ord_6721e2e779428', 'Mickey', '23455643535', 1, 'Wash/Dry/Fold', 1, 'Clothes/Table Napkins/Pillowcase', 7, '6.00', '35.00', '0000-00-00', '2024-10-30', '15:40:23', 'active', 'delivered'),
-(40, 51, 'ord_6721e3af8bea7', 'Minnie', '23456432456', 1, 'Wash/Dry/Fold', 1, 'Clothes/Table Napkins/Pillowcase', 5, '7.00', '35.00', '0000-00-00', '2024-10-30', '15:43:43', 'active', 'delivered'),
-(41, 52, 'ord_672b3071a4042', 'Pink Sweat', '22222222222', 1, 'Wash/Dry/Fold', 3, 'Comforter/Bath towel\r\n', 6, '6.00', '55.00', '2024-11-07', '2024-11-06', '17:01:37', 'completed', 'delivered'),
-(42, 53, 'ord_672b31f279e58', 'adi', '90000000000', 1, 'Wash/Dry/Fold', 1, 'Clothes/Table Napkins/Pillowcase', 1, '5.00', '35.00', '2024-11-09', '2024-11-06', '17:08:02', 'completed', 'delivered'),
-(43, 54, 'ord_672b32751a9f9', 'tobi', '88888888888', 1, 'Wash/Dry/Fold', 3, 'Comforter/Bath towel\r\n', 1, '7.00', '55.00', '2024-11-07', '2024-11-06', '17:10:13', 'completed', 'delivered'),
-(44, 55, 'ord_672dbb38a8fb1', 'tiiin', '89687998787', 1, 'Wash/Dry/Fold', 1, 'Clothes/Table Napkins/Pillowcase', 4, '7.00', '35.00', '2024-11-12', '2024-11-08', '15:18:16', 'completed', 'delivered'),
-(45, 55, 'ord_672dbb38a8fb1', 'tiiin', '89687998787', 2, 'Wash/Dry/Press', 2, 'Bedsheet/Table Cloths/Curtain\r\n', 2, '6.00', '100.00', '2024-11-12', '2024-11-08', '15:18:16', 'completed', 'delivered'),
-(46, 56, 'ord_672dd6472ea5d', 'pedro', '00000000000', 1, 'Wash/Dry/Fold', 2, 'Bedsheet/Table Cloths/Curtain\r\n', 3, '8.00', '45.00', '2024-11-09', '2024-11-08', '17:13:43', 'completed', 'delivered'),
-(47, 56, 'ord_672dd6472ea5d', 'pedro', '00000000000', 3, 'Dry only', 3, 'Comforter/Bath towel\r\n', 3, '6.00', '55.00', '2024-11-09', '2024-11-08', '17:13:43', 'completed', 'delivered'),
-(48, 57, 'ord_672f38fc2e483', 'tintin', '09320902894', 2, 'Wash/Dry/Press', 2, 'Bedsheet/Table Cloths/Curtain\r\n', 4, '9.00', '100.00', '0000-00-00', '2024-11-09', '18:27:08', 'active', 'delivered'),
-(49, 58, 'ord_672f3c1850cc0', 'mingming', '23456786543', 6, 'Wash only', 2, 'Bedsheet/Table Cloths/Curtain\r\n', 6, '5.00', '100.00', '0000-00-00', '2024-11-09', '18:40:24', 'cancelled', 'delivered'),
-(50, 59, 'ord_672f4043e6294', 'milky', '34567890876', 2, 'Wash/Dry/Press', 1, 'Clothes/Table Napkins/Pillowcase', 3, '8.00', '80.00', '2024-11-15', '2024-11-09', '18:58:11', 'completed', 'delivered'),
-(51, 60, 'ord_672f410c333f7', 'Winnie', '56789032222', 1, 'Wash/Dry/Fold', 2, 'Bedsheet/Table Cloths/Curtain\r\n', 5, '8.00', '46.00', '0000-00-00', '2024-11-09', '19:01:32', 'active', 'delivered'),
-(52, 62, 'ord_672f426e18668', 'chitoo', '28343734890', 1, 'Wash/Dry/Fold', 1, 'Clothes/Table Napkins/Pillowcase', 5, '7.00', '35.00', '2024-11-12', '2024-11-09', '19:07:26', 'completed', 'delivered'),
-(53, 62, 'ord_672f4380e7331', 'chitoo', '98976578902', 1, 'Wash/Dry/Fold', 1, 'Clothes/Table Napkins/Pillowcase', 5, '7.00', '35.00', '2024-11-12', '2024-11-09', '19:12:00', 'completed', 'delivered'),
-(54, 64, 'ord_672f6ed480954', 'Charlize', '34567843544', 2, 'Wash/Dry/Press', 1, 'Clothes/Table Napkins/Pillowcase', 5, '6.00', '80.00', '2024-11-12', '2024-11-09', '22:16:52', 'completed', 'delivered'),
-(55, 65, 'ord_672f70083d3bd', 'Mika Ela', '87272984390', 1, 'Wash/Dry/Fold', 2, 'Bedsheet/Table Cloths/Curtain\r\n', 6, '8.00', '46.00', '0000-00-00', '2024-11-09', '22:22:00', 'active', 'delivered'),
-(56, 65, 'ord_672f70083d3bd', 'Mika Ela', '87272984390', 1, 'Wash/Dry/Fold', 1, 'Clothes/Table Napkins/Pillowcase', 6, '8.00', '35.00', '0000-00-00', '2024-11-09', '22:22:00', 'active', 'delivered'),
-(57, 66, 'ord_672f98b5e2da3', 'Pearl Magbanua', '35534657643', 2, 'Wash/Dry/Press', 1, 'Clothes/Table Napkins/Pillowcase', 5, '5.00', '80.00', '2024-11-13', '2024-11-10', '01:15:33', 'completed', 'delivered'),
-(58, 67, 'ord_6731ba6911d9a', 'denise v', '09555555555', 1, 'Wash/Dry/Fold', 1, 'Clothes/Table Napkins/Pillowcase', 2, '6.00', '35.00', '0000-00-00', '2024-11-11', '16:03:53', 'cancelled', 'delivered'),
-(59, 68, 'ord_6731bb7f5cad9', 'den', '99999999999', 1, 'Wash/Dry/Fold', 2, 'Bedsheet/Table Cloths/Curtain\r\n', 1, '6.00', '45.00', '2024-11-12', '2024-11-11', '16:08:31', 'completed', 'delivered'),
-(60, 69, 'ord_6731bd39a8a32', 'fht', '54657877777', 2, 'Wash/Dry/Press', 2, 'Bedsheet/Table Cloths/Curtain\r\n', 3, '7.00', '100.00', '0000-00-00', '2024-11-11', '16:15:53', 'cancelled', 'delivered'),
-(61, 70, 'ord_6731bf9a8cbf2', 'Muning Dela Cruz', '09876890876', 1, 'Wash/Dry/Fold', 1, 'Clothes/Table Napkins/Pillowcase', 6, '8.00', '35.00', '0000-00-00', '2024-11-11', '16:26:02', 'active', 'delivered'),
-(62, 70, 'ord_6731c052011b7', 'Muning Dela Cruz', '09876789034', 2, 'Wash/Dry/Press', 2, 'Bedsheet/Table Cloths/Curtain\r\n', 6, '7.00', '100.00', '0000-00-00', '2024-11-11', '16:29:06', 'active', 'delivered'),
-(63, 58, 'ord_6731c11d514c2', 'Mingming', '35464765874', 3, 'Dry only', 3, 'Comforter/Bath towel\r\n', 8, '7.00', '55.00', '0000-00-00', '2024-11-11', '16:32:29', 'active', 'delivered'),
-(64, 58, 'ord_6731c1e246296', 'Mingming', '35464765874', 2, 'Wash/Dry/Press', 1, 'Clothes/Table Napkins/Pillowcase', 10, '8.00', '80.00', '0000-00-00', '2024-11-11', '16:35:46', 'active', 'delivered'),
-(65, 73, 'ord_67321ccaec306', 'Tintin Magbanua', '09404304930', 3, 'Dry only', 1, 'Clothes/Table Napkins/Pillowcase', 4, '5.00', '35.00', '2024-11-14', '2024-11-11', '23:03:38', 'completed', 'delivered'),
-(66, 74, 'ord_67322c125dc2a', 'Melanie ', '09876578909', 1, 'Wash/Dry/Fold', 1, 'Clothes/Table Napkins/Pillowcase', 7, '8.00', '35.00', '2024-11-12', '2024-11-12', '00:08:50', 'completed', 'delivered'),
-(68, 77, 'ord_6733172f30393', 'Dani DC', '09567890876', 1, 'Wash/Dry/Fold', 2, 'Bedsheet/Table Cloths/Curtain\r\n', 6, '8.00', '45.00', '2024-11-15', '2024-11-12', '16:51:59', 'completed', 'delivered'),
-(69, 78, 'ord_67331cbc7ec9f', 'Mung Go', '09534534643', 2, 'Wash/Dry/Press', 2, 'Bedsheet/Table Cloths/Curtain\r\n', 7, '8.00', '100.00', '0000-00-00', '2024-11-12', '17:15:40', 'cancelled', 'delivered'),
-(70, 79, 'ord_6733282bdee4a', 'juju beat', '09173627362', 1, 'Wash/Dry/Fold', 2, 'Bedsheet/Table Cloths/Curtain\r\n', 1, '8.00', '45.00', '2024-11-15', '2024-11-12', '18:04:27', 'completed', 'delivered'),
-(71, 80, 'ord_67342db130f07', 'Dani ela DC', '09876899087', 1, 'Wash/Dry/Fold', 1, 'Clothes/Table Napkins/Pillowcase', 7, '7.00', '35.00', '2024-11-16', '2024-11-13', '12:40:17', 'completed', 'delivered'),
-(72, 81, 'ord_673462470f27c', 'DANI DS', '09876890987', 1, 'Wash/Dry/Fold', 1, 'Clothes/Table Napkins/Pillowcase', 8, '8.00', '35.00', '2024-11-14', '2024-11-13', '16:24:39', 'completed', 'delivered'),
-(73, 82, 'ord_673463f1a8105', 'Gabrielle Dela Cruz', '09765434562', 1, 'Wash/Dry/Fold', 1, 'Clothes/Table Napkins/Pillowcase', 6, '6.00', '35.00', '2024-11-14', '2024-11-13', '16:31:45', 'completed', 'delivered'),
-(74, 83, 'ord_6734671ac1a77', 'Albert Einstein', '09876546789', 1, 'Wash/Dry/Fold', 2, 'Bedsheet/Table Cloths/Curtain\r\n', 7, '7.00', '45.00', '2024-11-16', '2024-11-13', '16:45:14', 'completed', 'delivered'),
-(75, 84, 'ord_67346da059dc5', 'Alexia Dela Cruz', '09876567897', 1, 'Wash/Dry/Fold', 1, 'Clothes/Table Napkins/Pillowcase', 7, '7.00', '35.00', '0000-00-00', '2024-11-13', '17:13:04', 'active', 'delivered'),
-(76, 84, 'ord_67346e66b21f9', 'Alexia Dela Cruz', '09678978987', 1, 'Wash/Dry/Fold', 1, 'Clothes/Table Napkins/Pillowcase', 7, '7.00', '35.00', '0000-00-00', '2024-11-13', '17:16:22', 'active', 'delivered'),
-(77, 86, 'ord_67346ecce84a5', 'Alexia Tuloy', '09090876865', 1, 'Wash/Dry/Fold', 1, 'Clothes/Table Napkins/Pillowcase', 7, '7.00', '35.00', '2024-11-16', '2024-11-13', '17:18:04', 'completed', 'delivered'),
-(78, 87, 'ord_6734a9cb94f45', 'JC Bieber', '09789899989', 2, 'Wash/Dry/Press', 3, 'Comforter/Bath towel\r\n', 5, '5.00', '100.00', '2024-11-16', '2024-11-13', '21:29:47', 'completed', 'delivered'),
-(79, 88, 'ord_6734aac6828c4', 'Maria DB', '09872637621', 2, 'Wash/Dry/Press', 1, 'Clothes/Table Napkins/Pillowcase', 5, '5.00', '80.00', '2024-11-14', '2024-11-13', '21:33:58', 'completed', 'delivered'),
-(80, 89, 'ord_6735b50a2c517', 'Samuel Valentine', '09878998997', 1, 'Wash/Dry/Fold', 2, 'Bedsheet/Table Cloths/Curtain\r\n', 2, '6.00', '45.00', '2024-11-17', '2024-11-14', '16:30:02', 'completed', 'delivered'),
-(81, 90, 'ord_6735c199196da', 'denise', '09123472384', 2, 'Wash/Dry/Press', 2, 'Bedsheet/Table Cloths/Curtain', 2, '7.00', '100.00', '2024-11-17', '2024-11-14', '17:23:37', 'completed', 'delivered'),
-(82, 91, 'ord_6735c41d90f78', 'sabrina', '09882772363', 2, 'Wash/Dry/Press', 1, 'Clothes/Table Napkins/Pillowcase', 2, '9.00', '80.00', '2024-11-17', '2024-11-14', '17:34:21', 'completed', 'delivered'),
-(83, 92, 'ord_6735c498b4b3c', 'barry', '09834723423', 1, 'Wash/Dry/Fold', 1, 'Clothes/Table Napkins/Pillowcase', 2, '8.00', '35.00', '2024-11-17', '2024-11-14', '17:36:24', 'completed', 'delivered'),
-(84, 93, 'ord_6735c56636b5c', 'huhu', '09127384236', 2, 'Wash/Dry/Press', 1, 'Clothes/Table Napkins/Pillowcase', 1, '6.00', '80.00', '2024-11-17', '2024-11-14', '17:39:50', 'completed', 'delivered'),
-(85, 94, 'ord_6735c6fb63701', 'g wolf', '09433544535', 2, 'Wash/Dry/Press', 2, 'Bedsheet/Table Cloths/Curtain', 2, '6.00', '100.00', '2024-11-17', '2024-11-14', '17:46:35', 'completed', 'delivered'),
-(86, 95, 'ord_6735c7d16780b', 'assssfafwe', '09878767682', 2, 'Wash/Dry/Press', 1, 'Clothes/Table Napkins/Pillowcase', 1, '6.00', '80.00', '2024-11-17', '2024-11-14', '17:50:09', 'completed', 'delivered'),
-(87, 96, 'ord_6735c88283a72', 'Manny Regalado', '09675789765', 2, 'Wash/Dry/Press', 1, 'Clothes/Table Napkins/Pillowcase', 7, '7.00', '80.00', '2024-11-17', '2024-11-14', '17:53:06', 'completed', 'delivered'),
-(88, 97, 'ord_6735cba1e655b', 'Mina De', '09849023748', 1, 'Wash/Dry/Fold', 2, 'Bedsheet/Table Cloths/Curtain', 3, '9.00', '45.00', '2024-11-15', '2024-11-14', '18:06:25', 'completed', 'delivered'),
-(89, 98, 'ord_6735fa7d2150f', 'Cattleya Arce', '09898989887', 1, 'Wash/Dry/Fold', 2, 'Bedsheet/Table Cloths/Curtain', 5, '7.00', '45.00', '2024-11-17', '2024-11-14', '21:26:21', 'completed', 'delivered'),
-(90, 99, 'ord_6735faf7d7d23', 'Trisha Mae', '09897877686', 2, 'Wash/Dry/Press', 2, 'Bedsheet/Table Cloths/Curtain', 5, '8.00', '100.00', '2024-11-17', '2024-11-14', '21:28:23', 'completed', 'delivered'),
-(91, 100, 'ord_6735fedba1d3e', 'Jolibee Macdonalds', '09889898978', 2, 'Wash/Dry/Press', 1, 'Clothes/Table Napkins/Pillowcase', 4, '6.00', '80.00', '2024-11-17', '2024-11-14', '21:44:59', 'completed', 'delivered'),
-(92, 100, 'ord_6735fedba1d3e', 'Jolibee Macdonalds', '09889898978', 1, 'Wash/Dry/Fold', 1, 'Clothes/Table Napkins/Pillowcase', 5, '5.00', '35.00', '2024-11-17', '2024-11-14', '21:44:59', 'completed', 'delivered'),
-(93, 101, 'ord_6736003865a66', 'Maria Weibo', '09879878777', 1, 'Wash/Dry/Fold', 1, 'Clothes/Table Napkins/Pillowcase', 7, '6.00', '35.00', '2024-11-17', '2024-11-14', '21:50:48', 'completed', 'delivered'),
-(94, 102, 'ord_673602d2b8819', 'Kim Jisoo', '09089898988', 1, 'Wash/Dry/Fold', 1, 'Clothes/Table Napkins/Pillowcase', 5, '6.00', '35.00', '2024-11-17', '2024-11-14', '22:01:54', 'completed', 'delivered'),
-(95, 103, 'ord_67360ba77dd53', 'Rudolf Magallanes', '09098989898', 1, 'Wash/Dry/Fold', 2, 'Bedsheet/Table Cloths/Curtain', 5, '7.00', '45.00', '0000-00-00', '2024-11-14', '22:39:35', 'active', 'delivered'),
-(96, 104, 'ord_67360db87ded4', 'Alexis Brown', '09898986557', 2, 'Wash/Dry/Press', 1, 'Clothes/Table Napkins/Pillowcase', 5, '7.00', '80.00', '2024-11-17', '2024-11-14', '22:48:24', 'completed', 'delivered'),
-(97, 105, 'ord_673679412011a', 'Mandry Moore', '09878787877', 1, 'Wash/Dry/Fold', 1, 'Clothes/Table Napkins/Pillowcase', 7, '8.00', '35.00', '2024-11-15', '2024-11-15', '06:27:13', 'completed', 'delivered'),
-(98, 106, 'ord_67369beb25d40', '2342rthrthgrt', '09463242342', 3, 'Dry only', 2, 'Bedsheet/Table Cloths/Curtain', 8, '5.00', '45.00', '2024-11-16', '2024-11-15', '08:55:07', 'completed', 'delivered'),
-(99, 107, 'ord_67369d39d762c', '234', '09462342645', 1, 'Wash/Dry/Fold', 1, 'Clothes/Table Napkins/Pillowcase', 10, '5.00', '35.00', '2024-11-16', '2024-11-15', '09:00:41', 'completed', 'delivered'),
-(100, 108, 'ord_67369e84c1f5d', '134', '09123134345', 2, 'Wash/Dry/Press', 1, 'Clothes/Table Napkins/Pillowcase', 6, '5.00', '80.00', '2024-11-16', '2024-11-15', '09:06:12', 'completed', 'delivered'),
-(101, 109, 'ord_6736a6ab63ec1', 'Reliza Gatchalian', '09765678768', 1, 'Wash/Dry/Fold', 1, 'Clothes/Table Napkins/Pillowcase', 1, '7.50', '35.00', '2024-11-16', '2024-11-15', '09:40:59', 'completed', 'delivered'),
-(102, 109, 'ord_6736a6ab63ec1', 'Reliza Gatchalian', '09765678768', 2, 'Wash/Dry/Press', 1, 'Clothes/Table Napkins/Pillowcase', 1, '5.00', '80.00', '2024-11-16', '2024-11-15', '09:40:59', 'completed', 'delivered'),
-(103, 111, 'ord_6736b8e3f1c8a', 'patient1', '09123142353', 2, 'Wash/Dry/Press', 2, 'Bedsheet/Table Cloths/Curtain', 1, '5.00', '100.00', '2024-11-16', '2024-11-15', '10:58:43', 'completed', 'delivered'),
-(104, 112, 'ord_6736cdd20694c', 'Claire', '09134141424', 1, 'Wash/Dry/Fold', 1, 'Clothes/Table Napkins/Pillowcase', 1, '5.00', '35.00', '2024-11-16', '2024-11-15', '12:28:02', 'completed', 'delivered'),
-(105, 112, 'ord_6736cdd20694c', 'Claire', '09134141424', 1, 'Wash/Dry/Fold', 2, 'Bedsheet/Table Cloths/Curtain', 2, '7.03', '45.00', '2024-11-16', '2024-11-15', '12:28:02', 'completed', 'delivered'),
-(106, 113, 'ord_6736d420aea8b', 'leah', '09035324234', 1, 'Wash/Dry/Fold', 1, 'Clothes/Table Napkins/Pillowcase', 1, '5.00', '35.00', '2024-11-16', '2024-11-15', '12:54:56', 'completed', 'delivered'),
-(107, 114, 'ord_6736f21163258', 'Jonathan Demate', '09878786887', 1, 'Wash/Dry/Fold', 3, 'Comforter/Bath towel', 1, '5.00', '55.00', '2024-11-16', '2024-11-15', '15:02:41', 'completed', 'delivered'),
-(108, 115, 'ord_6736f5858114d', 'Michael', '09234245456', 1, 'Wash/Dry/Fold', 1, 'Clothes/Table Napkins/Pillowcase', 1, '5.00', '35.00', '2024-11-16', '2024-11-15', '15:17:25', 'completed', 'delivered'),
-(109, 115, 'ord_6736f5858114d', 'Michael', '09234245456', 2, 'Wash/Dry/Press', 1, 'Clothes/Table Napkins/Pillowcase', 1, '5.00', '80.00', '2024-11-16', '2024-11-15', '15:17:25', 'completed', 'delivered'),
-(110, 116, 'ord_67370186519fe', '3E', '09123123131', 1, 'Wash/Dry/Fold', 1, 'Clothes/Table Napkins/Pillowcase', 2, '5.00', '35.00', '2024-11-16', '2024-11-15', '16:08:38', 'completed', 'delivered'),
-(111, 116, 'ord_67370186519fe', '3E', '09123123131', 2, 'Wash/Dry/Press', 1, 'Clothes/Table Napkins/Pillowcase', 2, '6.00', '80.00', '2024-11-16', '2024-11-15', '16:08:38', 'completed', 'delivered'),
-(112, 117, 'ord_673f16563bb22', 'Winnie Pooh', '09898900009', 2, 'Wash/Dry/Press', 2, 'Bedsheet/Table Cloths/Curtain', 4, '7.00', '100.00', '2024-11-22', '2024-11-21', '19:15:34', 'completed', 'delivered'),
-(113, 118, 'ord_673f181b96863', 'Sadie Sink', '09989898989', 1, 'Wash/Dry/Fold', 1, 'Clothes/Table Napkins/Pillowcase', 2, '5.00', '35.00', '2024-11-24', '2024-11-21', '19:23:07', 'completed', 'claimed'),
-(114, 119, 'ord_673f1ab23d43e', 'Christian Serratos', '09089898909', 1, 'Wash/Dry/Fold', 3, 'Comforter/Bath towel', 5, '8.00', '55.00', '2024-11-22', '2024-11-21', '19:34:10', 'completed', 'pending'),
-(115, 120, 'ord_673f26feba0a2', 'Glinda', '09009009909', 1, 'Wash/Dry/Fold', 3, 'Comforter/Bath towel', 7, '5.00', '55.00', '2024-11-24', '2024-11-21', '20:26:38', 'completed', 'pending'),
-(116, 121, 'ord_673f27d2690f9', 'Elphaba', '09090890000', 2, 'Wash/Dry/Press', 2, 'Bedsheet/Table Cloths/Curtain', 8, '6.00', '100.00', '2024-11-24', '2024-11-21', '20:30:10', 'completed', 'pending'),
-(117, 122, 'ord_673f2cde42407', 'Marcella Santos', '09090000000', 2, 'Wash/Dry/Press', 1, 'Clothes/Table Napkins/Pillowcase', 7, '5.00', '80.00', '0000-00-00', '2024-11-21', '20:51:42', 'active', 'pending');
+(1, 16, '0', 'dsfs', '32434242224', 1, 'Wash/Dry/Fold', 1, 'Clothes/Table Napkins/Pillowcase', 5, '5.00', '35.00', '2024-09-04', '2024-09-01', '21:01:52', '', 'Delivered'),
+(2, 17, '0', 'rd', '98767546789', 1, 'Wash/Dry/Fold', 1, 'Clothes/Table Napkins/Pillowcase', 2, '7.00', '35.00', '0000-00-00', '2024-09-01', '21:01:52', '', 'Delivered'),
+(3, 18, '0', 'roi', '98767546786', 1, 'Wash/Dry/Fold', 3, 'Comforter/Bath towel\r\n', 7, '18.00', '65.00', '2024-09-04', '2024-09-01', '21:01:52', 'completed', 'Delivered'),
+(4, 19, '0', 'tun', '87654367890', 1, 'Wash/Dry/Fold', 2, 'Bedsheet/Table Cloths/Curtain\r\n', 3, '6.00', '55.00', '0000-00-00', '2024-09-01', '21:01:52', 'cancelled', 'Delivered'),
+(5, 20, '0', 'dsgs', '43567890765', 1, 'Wash/Dry/Fold', 2, 'Bedsheet/Table Cloths/Curtain\r\n', 5, '20.00', '55.00', '0000-00-00', '2024-09-06', '21:01:52', 'cancelled', 'Delivered'),
+(6, 21, '0', 'chris', '34565432345', 3, 'Dry only', 3, 'Comforter/Bath towel\r\n', 3, '6.00', '55.00', '0000-00-00', '2024-09-06', '21:01:52', 'active', 'Delivered'),
+(7, 22, '0', 'vanilla', '23456645654', 2, 'Wash/Dry/Press', 1, 'Clothes/Table Napkins/Pillowcase', 8, '7.00', '80.00', '2024-09-20', '2024-09-17', '00:15:01', 'completed', 'Delivered'),
+(8, 23, '0', 'ming', '34567654321', 2, 'Wash/Dry/Press', 2, 'Bedsheet/Table Cloths/Curtain\r\n', 6, '6.00', '100.00', '2024-09-20', '2024-09-17', '00:32:52', 'completed', 'Delivered'),
+(9, 24, '0', 'christine', '09997852239', 2, 'Wash/Dry/Press', 2, 'Bedsheet/Table Cloths/Curtain\r\n', 6, '6.00', '100.00', '2024-09-23', '2024-09-20', '17:54:59', 'completed', 'Delivered'),
+(10, 24, '0', 'christine', '09997852239', 1, 'Wash/Dry/Fold', 2, 'Bedsheet/Table Cloths/Curtain\r\n', 5, '7.00', '55.00', '2024-09-23', '2024-09-20', '18:17:59', 'completed', 'Delivered'),
+(11, 25, '0', 'tintin', '09059748294', 3, 'Dry only', 3, 'Comforter/Bath towel\r\n', 7, '6.00', '55.00', '2024-09-23', '2024-09-20', '18:26:02', 'completed', 'Delivered'),
+(12, 25, '0', 'tintin', '09059748294', 1, 'Wash/Dry/Fold', 1, 'Clothes/Table Napkins/Pillowcase', 4, '5.00', '35.00', '2024-09-23', '2024-09-20', '18:26:02', 'completed', 'Delivered'),
+(13, 26, '0', 'winnie', '53459876574', 1, 'Wash/Dry/Fold', 2, 'Bedsheet/Table Cloths/Curtain\r\n', 4, '6.00', '55.00', '2024-09-23', '2024-09-20', '21:18:18', 'completed', 'Delivered'),
+(14, 27, '0', 'milky', '33325253252', 2, 'Wash/Dry/Press', 2, 'Bedsheet/Table Cloths/Curtain\r\n', 5, '6.00', '100.00', '2024-09-25', '2024-09-22', '21:18:02', 'completed', 'Delivered'),
+(15, 24, '', 'Christine', '09997852239', 2, 'Wash/Dry/Press', 1, 'Clothes/Table Napkins/Pillowcase', 4, '7.00', '80.00', '0000-00-00', '2024-09-28', '22:50:13', 'cancelled', 'Delivered'),
+(17, 28, '', 'frf', '34567897654', 1, 'Wash/Dry/Fold', 2, 'Bedsheet/Table Cloths/Curtain\r\n', 6, '7.00', '55.00', '0000-00-00', '2024-09-30', '15:38:52', 'cancelled', 'Delivered'),
+(18, 29, '', 'denise', '22220000000', 1, 'Wash/Dry/Fold', 2, 'Bedsheet/Table Cloths/Curtain\r\n', 2, '5.00', '55.00', '2024-09-28', '2024-09-30', '15:43:15', 'completed', 'Delivered'),
+(21, 31, 'order_66fa5b508b935', 'nitinit', '50000000000', 1, 'Wash/Dry/Fold', 2, 'Bedsheet/Table Cloths/Curtain\r\n', 1, '6.00', '55.00', '2024-09-30', '2024-09-30', '16:03:28', 'completed', 'Delivered'),
+(22, 18, 'order_66fa5c9080943', 'roi', '80000000000', 2, 'Wash/Dry/Press', 2, 'Bedsheet/Table Cloths/Curtain\r\n', 1, '7.00', '100.00', '2024-09-30', '2024-09-30', '16:08:48', 'completed', 'Delivered'),
+(23, 33, 'order_66fa5cd4099d7', 'nitnit lomi', '80000888888', 1, 'Wash/Dry/Fold', 2, 'Bedsheet/Table Cloths/Curtain\r\n', 2, '5.00', '55.00', '0000-00-00', '2024-09-30', '16:09:56', 'cancelled', 'Delivered'),
+(24, 33, 'order_66fa5d5c78310', 'nitnit lomi', '70000000000', 1, 'Wash/Dry/Fold', 1, 'Clothes/Table Napkins/Pillowcase', 2, '6.00', '35.00', '2024-09-28', '2024-09-30', '16:12:12', 'completed', 'Delivered'),
+(25, 33, 'order_66fa5d5c78310', 'nitnit lomi', '70000000000', 2, 'Wash/Dry/Press', 1, 'Clothes/Table Napkins/Pillowcase', 1, '6.00', '80.00', '2024-09-28', '2024-09-30', '16:12:12', 'completed', 'Delivered'),
+(26, 24, 'order_66fd2c6e35fe1', 'christine', '82828228288', 2, 'Wash/Dry/Press', 2, 'Bedsheet/Table Cloths/Curtain\r\n', 6, '7.00', '100.00', '2024-10-02', '2024-10-02', '19:20:14', 'completed', 'Delivered'),
+(27, 36, 'ord_6703ed88000fa', 'Christinee', '09951273842', 1, 'Wash/Dry/Fold', 3, 'Comforter/Bath towel\r\n', 3, '8.00', '65.00', '2024-10-07', '2024-10-07', '22:17:44', 'completed', 'Delivered'),
+(28, 37, 'ord_670f2750b0128', 'Idowl', '09123457899', 3, 'Dry only', 1, 'Clothes/Table Napkins/Pillowcase', 1, '20.00', '35.00', '0000-00-00', '2024-10-16', '10:39:12', 'cancelled', 'Delivered'),
+(29, 41, 'ord_67132a9f8e8a9', 'Liam ', '44444444444', 1, 'Wash/Dry/Fold', 2, 'Bedsheet/Table Cloths/Curtain\r\n', 4, '10.00', '55.00', '2024-10-19', '2024-10-19', '11:42:23', 'completed', 'Delivered'),
+(30, 42, 'ord_67191dff2f712', 'Kristine', '65644564564', 1, 'Wash/Dry/Fold', 1, 'Clothes/Table Napkins/Pillowcase', 4, '10.00', '35.00', '2024-10-24', '2024-10-24', '00:02:07', 'completed', 'Delivered'),
+(31, 42, 'ord_671925e957323', 'Kristine', '43442424234', 2, 'Wash/Dry/Press', 2, 'Bedsheet/Table Cloths/Curtain\r\n', 5, '5.00', '100.00', '2024-10-24', '2024-10-24', '00:35:53', 'completed', 'Delivered'),
+(32, 42, 'ord_671925e957323', 'Kristine', '43535345334', 2, 'Wash/Dry/Press', 1, 'Clothes/Table Napkins/Pillowcase', 2, '5.00', '80.00', '2024-10-24', '2024-10-24', '00:35:53', 'completed', 'Delivered'),
+(33, 42, 'ord_671925e957323', 'Kristine', '43535345334', 2, 'Wash/Dry/Press', 2, 'Bedsheet/Table Cloths/Curtain\r\n', 6, '6.00', '100.00', '2024-10-24', '2024-10-24', '00:35:53', 'completed', 'Delivered'),
+(34, 42, 'ord_671931b845adb', 'Kristine', '34343324423', 1, 'Wash/Dry/Fold', 1, 'Clothes/Table Napkins/Pillowcase', 6, '10.00', '35.00', '2024-10-24', '2024-10-24', '01:26:16', 'completed', 'Delivered'),
+(35, 42, 'ord_6719a82daae51', 'Kristine', '23456576876', 1, 'Wash/Dry/Fold', 1, 'Clothes/Table Napkins/Pillowcase', 1, '5.00', '35.00', '2024-10-24', '2024-10-24', '09:51:41', 'completed', 'Delivered'),
+(36, 48, 'ord_6719a8bc89519', 'Cristine', '11111111111', 1, 'Wash/Dry/Fold', 1, 'Clothes/Table Napkins/Pillowcase', 2, '5.00', '35.00', '2024-10-24', '2024-10-24', '09:54:04', 'completed', 'Delivered'),
+(37, 48, 'ord_6719a8bc89519', 'Cristine', '11111111111', 2, 'Wash/Dry/Press', 2, 'Bedsheet/Table Cloths/Curtain\r\n', 3, '6.00', '100.00', '2024-10-24', '2024-10-24', '09:54:04', 'completed', 'Delivered'),
+(38, 49, 'ord_6721e19056af1', 'Gwen', '42343435345', 2, 'Wash/Dry/Press', 2, 'Bedsheet/Table Cloths/Curtain\r\n', 6, '6.00', '100.00', '2024-11-02', '2024-10-30', '15:34:40', 'completed', 'Delivered'),
+(39, 50, 'ord_6721e2e779428', 'Mickey', '23455643535', 1, 'Wash/Dry/Fold', 1, 'Clothes/Table Napkins/Pillowcase', 7, '6.00', '35.00', '0000-00-00', '2024-10-30', '15:40:23', 'active', 'Delivered'),
+(40, 51, 'ord_6721e3af8bea7', 'Minnie', '23456432456', 1, 'Wash/Dry/Fold', 1, 'Clothes/Table Napkins/Pillowcase', 5, '7.00', '35.00', '0000-00-00', '2024-10-30', '15:43:43', 'active', 'Delivered'),
+(41, 52, 'ord_672b3071a4042', 'Pink Sweat', '22222222222', 1, 'Wash/Dry/Fold', 3, 'Comforter/Bath towel\r\n', 6, '6.00', '55.00', '2024-11-07', '2024-11-06', '17:01:37', 'completed', 'Delivered'),
+(42, 53, 'ord_672b31f279e58', 'adi', '90000000000', 1, 'Wash/Dry/Fold', 1, 'Clothes/Table Napkins/Pillowcase', 1, '5.00', '35.00', '2024-11-09', '2024-11-06', '17:08:02', 'completed', 'Delivered'),
+(43, 54, 'ord_672b32751a9f9', 'tobi', '88888888888', 1, 'Wash/Dry/Fold', 3, 'Comforter/Bath towel\r\n', 1, '7.00', '55.00', '2024-11-07', '2024-11-06', '17:10:13', 'completed', 'Delivered'),
+(44, 55, 'ord_672dbb38a8fb1', 'tiiin', '89687998787', 1, 'Wash/Dry/Fold', 1, 'Clothes/Table Napkins/Pillowcase', 4, '7.00', '35.00', '2024-11-12', '2024-11-08', '15:18:16', 'completed', 'Delivered'),
+(45, 55, 'ord_672dbb38a8fb1', 'tiiin', '89687998787', 2, 'Wash/Dry/Press', 2, 'Bedsheet/Table Cloths/Curtain\r\n', 2, '6.00', '100.00', '2024-11-12', '2024-11-08', '15:18:16', 'completed', 'Delivered'),
+(46, 56, 'ord_672dd6472ea5d', 'pedro', '00000000000', 1, 'Wash/Dry/Fold', 2, 'Bedsheet/Table Cloths/Curtain\r\n', 3, '8.00', '45.00', '2024-11-09', '2024-11-08', '17:13:43', 'completed', 'Delivered'),
+(47, 56, 'ord_672dd6472ea5d', 'pedro', '00000000000', 3, 'Dry only', 3, 'Comforter/Bath towel\r\n', 3, '6.00', '55.00', '2024-11-09', '2024-11-08', '17:13:43', 'completed', 'Delivered'),
+(48, 57, 'ord_672f38fc2e483', 'tintin', '09320902894', 2, 'Wash/Dry/Press', 2, 'Bedsheet/Table Cloths/Curtain\r\n', 4, '9.00', '100.00', '0000-00-00', '2024-11-09', '18:27:08', 'active', 'Delivered'),
+(49, 58, 'ord_672f3c1850cc0', 'mingming', '23456786543', 6, 'Wash only', 2, 'Bedsheet/Table Cloths/Curtain\r\n', 6, '5.00', '100.00', '0000-00-00', '2024-11-09', '18:40:24', 'cancelled', 'Delivered'),
+(50, 59, 'ord_672f4043e6294', 'milky', '34567890876', 2, 'Wash/Dry/Press', 1, 'Clothes/Table Napkins/Pillowcase', 3, '8.00', '80.00', '2024-11-15', '2024-11-09', '18:58:11', 'completed', 'Delivered'),
+(51, 60, 'ord_672f410c333f7', 'Winnie', '56789032222', 1, 'Wash/Dry/Fold', 2, 'Bedsheet/Table Cloths/Curtain\r\n', 5, '8.00', '46.00', '0000-00-00', '2024-11-09', '19:01:32', 'active', 'Delivered'),
+(52, 62, 'ord_672f426e18668', 'chitoo', '28343734890', 1, 'Wash/Dry/Fold', 1, 'Clothes/Table Napkins/Pillowcase', 5, '7.00', '35.00', '2024-11-12', '2024-11-09', '19:07:26', 'completed', 'Delivered'),
+(53, 62, 'ord_672f4380e7331', 'chitoo', '98976578902', 1, 'Wash/Dry/Fold', 1, 'Clothes/Table Napkins/Pillowcase', 5, '7.00', '35.00', '2024-11-12', '2024-11-09', '19:12:00', 'completed', 'Delivered'),
+(54, 64, 'ord_672f6ed480954', 'Charlize', '34567843544', 2, 'Wash/Dry/Press', 1, 'Clothes/Table Napkins/Pillowcase', 5, '6.00', '80.00', '2024-11-12', '2024-11-09', '22:16:52', 'completed', 'Delivered'),
+(55, 65, 'ord_672f70083d3bd', 'Mika Ela', '87272984390', 1, 'Wash/Dry/Fold', 2, 'Bedsheet/Table Cloths/Curtain\r\n', 6, '8.00', '46.00', '0000-00-00', '2024-11-09', '22:22:00', 'active', 'Delivered'),
+(56, 65, 'ord_672f70083d3bd', 'Mika Ela', '87272984390', 1, 'Wash/Dry/Fold', 1, 'Clothes/Table Napkins/Pillowcase', 6, '8.00', '35.00', '0000-00-00', '2024-11-09', '22:22:00', 'active', 'Delivered'),
+(57, 66, 'ord_672f98b5e2da3', 'Pearl Magbanua', '35534657643', 2, 'Wash/Dry/Press', 1, 'Clothes/Table Napkins/Pillowcase', 5, '5.00', '80.00', '2024-11-13', '2024-11-10', '01:15:33', 'completed', 'Delivered'),
+(58, 67, 'ord_6731ba6911d9a', 'denise v', '09555555555', 1, 'Wash/Dry/Fold', 1, 'Clothes/Table Napkins/Pillowcase', 2, '6.00', '35.00', '0000-00-00', '2024-11-11', '16:03:53', 'cancelled', 'Delivered'),
+(59, 68, 'ord_6731bb7f5cad9', 'den', '99999999999', 1, 'Wash/Dry/Fold', 2, 'Bedsheet/Table Cloths/Curtain\r\n', 1, '6.00', '45.00', '2024-11-12', '2024-11-11', '16:08:31', 'completed', 'Delivered'),
+(60, 69, 'ord_6731bd39a8a32', 'fht', '54657877777', 2, 'Wash/Dry/Press', 2, 'Bedsheet/Table Cloths/Curtain\r\n', 3, '7.00', '100.00', '0000-00-00', '2024-11-11', '16:15:53', 'cancelled', 'Delivered'),
+(61, 70, 'ord_6731bf9a8cbf2', 'Muning Dela Cruz', '09876890876', 1, 'Wash/Dry/Fold', 1, 'Clothes/Table Napkins/Pillowcase', 6, '8.00', '35.00', '0000-00-00', '2024-11-11', '16:26:02', 'active', 'Delivered'),
+(62, 70, 'ord_6731c052011b7', 'Muning Dela Cruz', '09876789034', 2, 'Wash/Dry/Press', 2, 'Bedsheet/Table Cloths/Curtain\r\n', 6, '7.00', '100.00', '0000-00-00', '2024-11-11', '16:29:06', 'active', 'Delivered'),
+(63, 58, 'ord_6731c11d514c2', 'Mingming', '35464765874', 3, 'Dry only', 3, 'Comforter/Bath towel\r\n', 8, '7.00', '55.00', '0000-00-00', '2024-11-11', '16:32:29', 'active', 'Delivered'),
+(64, 58, 'ord_6731c1e246296', 'Mingming', '35464765874', 2, 'Wash/Dry/Press', 1, 'Clothes/Table Napkins/Pillowcase', 10, '8.00', '80.00', '0000-00-00', '2024-11-11', '16:35:46', 'active', 'Delivered'),
+(65, 73, 'ord_67321ccaec306', 'Tintin Magbanua', '09404304930', 3, 'Dry only', 1, 'Clothes/Table Napkins/Pillowcase', 4, '5.00', '35.00', '2024-11-14', '2024-11-11', '23:03:38', 'completed', 'Delivered'),
+(66, 74, 'ord_67322c125dc2a', 'Melanie ', '09876578909', 1, 'Wash/Dry/Fold', 1, 'Clothes/Table Napkins/Pillowcase', 7, '8.00', '35.00', '2024-11-12', '2024-11-12', '00:08:50', 'completed', 'Delivered'),
+(68, 77, 'ord_6733172f30393', 'Dani DC', '09567890876', 1, 'Wash/Dry/Fold', 2, 'Bedsheet/Table Cloths/Curtain\r\n', 6, '8.00', '45.00', '2024-11-15', '2024-11-12', '16:51:59', 'completed', 'Delivered'),
+(69, 78, 'ord_67331cbc7ec9f', 'Mung Go', '09534534643', 2, 'Wash/Dry/Press', 2, 'Bedsheet/Table Cloths/Curtain\r\n', 7, '8.00', '100.00', '0000-00-00', '2024-11-12', '17:15:40', 'cancelled', 'Delivered'),
+(70, 79, 'ord_6733282bdee4a', 'juju beat', '09173627362', 1, 'Wash/Dry/Fold', 2, 'Bedsheet/Table Cloths/Curtain\r\n', 1, '8.00', '45.00', '2024-11-15', '2024-11-12', '18:04:27', 'completed', 'Delivered'),
+(71, 80, 'ord_67342db130f07', 'Dani ela DC', '09876899087', 1, 'Wash/Dry/Fold', 1, 'Clothes/Table Napkins/Pillowcase', 7, '7.00', '35.00', '2024-11-16', '2024-11-13', '12:40:17', 'completed', 'Delivered'),
+(72, 81, 'ord_673462470f27c', 'DANI DS', '09876890987', 1, 'Wash/Dry/Fold', 1, 'Clothes/Table Napkins/Pillowcase', 8, '8.00', '35.00', '2024-11-14', '2024-11-13', '16:24:39', 'completed', 'Delivered'),
+(73, 82, 'ord_673463f1a8105', 'Gabrielle Dela Cruz', '09765434562', 1, 'Wash/Dry/Fold', 1, 'Clothes/Table Napkins/Pillowcase', 6, '6.00', '35.00', '2024-11-14', '2024-11-13', '16:31:45', 'completed', 'Delivered'),
+(74, 83, 'ord_6734671ac1a77', 'Albert Einstein', '09876546789', 1, 'Wash/Dry/Fold', 2, 'Bedsheet/Table Cloths/Curtain\r\n', 7, '7.00', '45.00', '2024-11-16', '2024-11-13', '16:45:14', 'completed', 'Delivered'),
+(75, 84, 'ord_67346da059dc5', 'Alexia Dela Cruz', '09876567897', 1, 'Wash/Dry/Fold', 1, 'Clothes/Table Napkins/Pillowcase', 7, '7.00', '35.00', '0000-00-00', '2024-11-13', '17:13:04', 'active', 'Delivered'),
+(76, 84, 'ord_67346e66b21f9', 'Alexia Dela Cruz', '09678978987', 1, 'Wash/Dry/Fold', 1, 'Clothes/Table Napkins/Pillowcase', 7, '7.00', '35.00', '0000-00-00', '2024-11-13', '17:16:22', 'active', 'Delivered'),
+(77, 86, 'ord_67346ecce84a5', 'Alexia Tuloy', '09090876865', 1, 'Wash/Dry/Fold', 1, 'Clothes/Table Napkins/Pillowcase', 7, '7.00', '35.00', '2024-11-16', '2024-11-13', '17:18:04', 'completed', 'Delivered'),
+(78, 87, 'ord_6734a9cb94f45', 'JC Bieber', '09789899989', 2, 'Wash/Dry/Press', 3, 'Comforter/Bath towel\r\n', 5, '5.00', '100.00', '2024-11-16', '2024-11-13', '21:29:47', 'completed', 'Delivered'),
+(79, 88, 'ord_6734aac6828c4', 'Maria DB', '09872637621', 2, 'Wash/Dry/Press', 1, 'Clothes/Table Napkins/Pillowcase', 5, '5.00', '80.00', '2024-11-14', '2024-11-13', '21:33:58', 'completed', 'Delivered'),
+(80, 89, 'ord_6735b50a2c517', 'Samuel Valentine', '09878998997', 1, 'Wash/Dry/Fold', 2, 'Bedsheet/Table Cloths/Curtain\r\n', 2, '6.00', '45.00', '2024-11-17', '2024-11-14', '16:30:02', 'completed', 'Delivered'),
+(81, 90, 'ord_6735c199196da', 'denise', '09123472384', 2, 'Wash/Dry/Press', 2, 'Bedsheet/Table Cloths/Curtain', 2, '7.00', '100.00', '2024-11-17', '2024-11-14', '17:23:37', 'completed', 'Delivered'),
+(82, 91, 'ord_6735c41d90f78', 'sabrina', '09882772363', 2, 'Wash/Dry/Press', 1, 'Clothes/Table Napkins/Pillowcase', 2, '9.00', '80.00', '2024-11-17', '2024-11-14', '17:34:21', 'completed', 'Delivered'),
+(83, 92, 'ord_6735c498b4b3c', 'barry', '09834723423', 1, 'Wash/Dry/Fold', 1, 'Clothes/Table Napkins/Pillowcase', 2, '8.00', '35.00', '2024-11-17', '2024-11-14', '17:36:24', 'completed', 'Delivered'),
+(84, 93, 'ord_6735c56636b5c', 'huhu', '09127384236', 2, 'Wash/Dry/Press', 1, 'Clothes/Table Napkins/Pillowcase', 1, '6.00', '80.00', '2024-11-17', '2024-11-14', '17:39:50', 'completed', 'Delivered'),
+(85, 94, 'ord_6735c6fb63701', 'g wolf', '09433544535', 2, 'Wash/Dry/Press', 2, 'Bedsheet/Table Cloths/Curtain', 2, '6.00', '100.00', '2024-11-17', '2024-11-14', '17:46:35', 'completed', 'Delivered'),
+(86, 95, 'ord_6735c7d16780b', 'assssfafwe', '09878767682', 2, 'Wash/Dry/Press', 1, 'Clothes/Table Napkins/Pillowcase', 1, '6.00', '80.00', '2024-11-17', '2024-11-14', '17:50:09', 'completed', 'Delivered'),
+(87, 96, 'ord_6735c88283a72', 'Manny Regalado', '09675789765', 2, 'Wash/Dry/Press', 1, 'Clothes/Table Napkins/Pillowcase', 7, '7.00', '80.00', '2024-11-17', '2024-11-14', '17:53:06', 'completed', 'Delivered'),
+(88, 97, 'ord_6735cba1e655b', 'Mina De', '09849023748', 1, 'Wash/Dry/Fold', 2, 'Bedsheet/Table Cloths/Curtain', 3, '9.00', '45.00', '2024-11-15', '2024-11-14', '18:06:25', 'completed', 'Delivered'),
+(89, 98, 'ord_6735fa7d2150f', 'Cattleya Arce', '09898989887', 1, 'Wash/Dry/Fold', 2, 'Bedsheet/Table Cloths/Curtain', 5, '7.00', '45.00', '2024-11-17', '2024-11-14', '21:26:21', 'completed', 'Delivered'),
+(90, 99, 'ord_6735faf7d7d23', 'Trisha Mae', '09897877686', 2, 'Wash/Dry/Press', 2, 'Bedsheet/Table Cloths/Curtain', 5, '8.00', '100.00', '2024-11-17', '2024-11-14', '21:28:23', 'completed', 'Delivered'),
+(91, 100, 'ord_6735fedba1d3e', 'Jolibee Macdonalds', '09889898978', 2, 'Wash/Dry/Press', 1, 'Clothes/Table Napkins/Pillowcase', 4, '6.00', '80.00', '2024-11-17', '2024-11-14', '21:44:59', 'completed', 'Delivered'),
+(92, 100, 'ord_6735fedba1d3e', 'Jolibee Macdonalds', '09889898978', 1, 'Wash/Dry/Fold', 1, 'Clothes/Table Napkins/Pillowcase', 5, '5.00', '35.00', '2024-11-17', '2024-11-14', '21:44:59', 'completed', 'Delivered'),
+(93, 101, 'ord_6736003865a66', 'Maria Weibo', '09879878777', 1, 'Wash/Dry/Fold', 1, 'Clothes/Table Napkins/Pillowcase', 7, '6.00', '35.00', '2024-11-17', '2024-11-14', '21:50:48', 'completed', 'Delivered'),
+(94, 102, 'ord_673602d2b8819', 'Kim Jisoo', '09089898988', 1, 'Wash/Dry/Fold', 1, 'Clothes/Table Napkins/Pillowcase', 5, '6.00', '35.00', '2024-11-17', '2024-11-14', '22:01:54', 'completed', 'Delivered'),
+(95, 103, 'ord_67360ba77dd53', 'Rudolf Magallanes', '09098989898', 1, 'Wash/Dry/Fold', 2, 'Bedsheet/Table Cloths/Curtain', 5, '7.00', '45.00', '0000-00-00', '2024-11-14', '22:39:35', 'active', 'Delivered'),
+(96, 104, 'ord_67360db87ded4', 'Alexis Brown', '09898986557', 2, 'Wash/Dry/Press', 1, 'Clothes/Table Napkins/Pillowcase', 5, '7.00', '80.00', '2024-11-17', '2024-11-14', '22:48:24', 'completed', 'Delivered'),
+(97, 105, 'ord_673679412011a', 'Mandry Moore', '09878787877', 1, 'Wash/Dry/Fold', 1, 'Clothes/Table Napkins/Pillowcase', 7, '8.00', '35.00', '2024-11-15', '2024-11-15', '06:27:13', 'completed', 'Delivered'),
+(98, 106, 'ord_67369beb25d40', '2342rthrthgrt', '09463242342', 3, 'Dry only', 2, 'Bedsheet/Table Cloths/Curtain', 8, '5.00', '45.00', '2024-11-16', '2024-11-15', '08:55:07', 'completed', 'Delivered'),
+(99, 107, 'ord_67369d39d762c', '234', '09462342645', 1, 'Wash/Dry/Fold', 1, 'Clothes/Table Napkins/Pillowcase', 10, '5.00', '35.00', '2024-11-16', '2024-11-15', '09:00:41', 'completed', 'Delivered'),
+(100, 108, 'ord_67369e84c1f5d', '134', '09123134345', 2, 'Wash/Dry/Press', 1, 'Clothes/Table Napkins/Pillowcase', 6, '5.00', '80.00', '2024-11-16', '2024-11-15', '09:06:12', 'completed', 'Delivered'),
+(101, 109, 'ord_6736a6ab63ec1', 'Reliza Gatchalian', '09765678768', 1, 'Wash/Dry/Fold', 1, 'Clothes/Table Napkins/Pillowcase', 1, '7.50', '35.00', '2024-11-16', '2024-11-15', '09:40:59', 'completed', 'Delivered'),
+(102, 109, 'ord_6736a6ab63ec1', 'Reliza Gatchalian', '09765678768', 2, 'Wash/Dry/Press', 1, 'Clothes/Table Napkins/Pillowcase', 1, '5.00', '80.00', '2024-11-16', '2024-11-15', '09:40:59', 'completed', 'Delivered'),
+(103, 111, 'ord_6736b8e3f1c8a', 'patient1', '09123142353', 2, 'Wash/Dry/Press', 2, 'Bedsheet/Table Cloths/Curtain', 1, '5.00', '100.00', '2024-11-16', '2024-11-15', '10:58:43', 'completed', 'Delivered'),
+(104, 112, 'ord_6736cdd20694c', 'Claire', '09134141424', 1, 'Wash/Dry/Fold', 1, 'Clothes/Table Napkins/Pillowcase', 1, '5.00', '35.00', '2024-11-16', '2024-11-15', '12:28:02', 'completed', 'Delivered'),
+(105, 112, 'ord_6736cdd20694c', 'Claire', '09134141424', 1, 'Wash/Dry/Fold', 2, 'Bedsheet/Table Cloths/Curtain', 2, '7.03', '45.00', '2024-11-16', '2024-11-15', '12:28:02', 'completed', 'Delivered'),
+(106, 113, 'ord_6736d420aea8b', 'leah', '09035324234', 1, 'Wash/Dry/Fold', 1, 'Clothes/Table Napkins/Pillowcase', 1, '5.00', '35.00', '2024-11-16', '2024-11-15', '12:54:56', 'completed', 'Delivered'),
+(107, 114, 'ord_6736f21163258', 'Jonathan Demate', '09878786887', 1, 'Wash/Dry/Fold', 3, 'Comforter/Bath towel', 1, '5.00', '55.00', '2024-11-16', '2024-11-15', '15:02:41', 'completed', 'Delivered'),
+(108, 115, 'ord_6736f5858114d', 'Michael', '09234245456', 1, 'Wash/Dry/Fold', 1, 'Clothes/Table Napkins/Pillowcase', 1, '5.00', '35.00', '2024-11-16', '2024-11-15', '15:17:25', 'completed', 'Delivered'),
+(109, 115, 'ord_6736f5858114d', 'Michael', '09234245456', 2, 'Wash/Dry/Press', 1, 'Clothes/Table Napkins/Pillowcase', 1, '5.00', '80.00', '2024-11-16', '2024-11-15', '15:17:25', 'completed', 'Delivered'),
+(110, 116, 'ord_67370186519fe', '3E', '09123123131', 1, 'Wash/Dry/Fold', 1, 'Clothes/Table Napkins/Pillowcase', 2, '5.00', '35.00', '2024-11-16', '2024-11-15', '16:08:38', 'completed', 'Delivered'),
+(111, 116, 'ord_67370186519fe', '3E', '09123123131', 2, 'Wash/Dry/Press', 1, 'Clothes/Table Napkins/Pillowcase', 2, '6.00', '80.00', '2024-11-16', '2024-11-15', '16:08:38', 'completed', 'Delivered'),
+(112, 117, 'ord_673f16563bb22', 'Winnie Pooh', '09898900009', 2, 'Wash/Dry/Press', 2, 'Bedsheet/Table Cloths/Curtain', 4, '7.00', '100.00', '2024-11-22', '2024-11-21', '19:15:34', 'completed', 'Delivered'),
+(113, 118, 'ord_673f181b96863', 'Sadie Sink', '09989898989', 1, 'Wash/Dry/Fold', 1, 'Clothes/Table Napkins/Pillowcase', 2, '5.00', '35.00', '2024-11-24', '2024-11-21', '19:23:07', 'completed', 'Claimed'),
+(114, 119, 'ord_673f1ab23d43e', 'Christian Serratos', '09089898909', 1, 'Wash/Dry/Fold', 3, 'Comforter/Bath towel', 5, '8.00', '55.00', '2024-11-26', '2024-11-21', '19:34:10', 'completed', 'Claimed'),
+(115, 120, 'ord_673f26feba0a2', 'Glinda', '09009009909', 1, 'Wash/Dry/Fold', 3, 'Comforter/Bath towel', 7, '5.00', '55.00', '2024-11-26', '2024-11-21', '20:26:38', 'completed', 'Undelivered'),
+(116, 121, 'ord_673f27d2690f9', 'Elphaba', '09090890000', 2, 'Wash/Dry/Press', 2, 'Bedsheet/Table Cloths/Curtain', 8, '6.00', '100.00', '2024-11-26', '2024-11-21', '20:30:10', 'completed', 'Claimed'),
+(117, 122, 'ord_673f2cde42407', 'Marcella Santos', '09090000000', 2, 'Wash/Dry/Press', 1, 'Clothes/Table Napkins/Pillowcase', 7, '5.00', '80.00', '0000-00-00', '2024-11-21', '20:51:42', 'active', 'Pending'),
+(118, 123, 'ord_67419ab7460e9', 'Migoy Dela Cruz', '09090899099', 1, 'Wash/Dry/Fold', 2, 'Bedsheet/Table Cloths/Curtain', 4, '7.00', '45.00', '2024-11-27', '2024-11-23', '17:04:55', 'completed', 'Delivered'),
+(119, 123, 'ord_67419c2a320aa', 'Migoy Dela Cruz', '09090899099', 1, 'Wash/Dry/Fold', 1, 'Clothes/Table Napkins/Pillowcase', 3, '6.00', '35.00', '2024-11-27', '2024-11-23', '17:11:06', 'completed', 'Delivered'),
+(120, 124, 'ord_6742fcbc32612', 'Barry Keoghan', '09908867904', 2, 'Wash/Dry/Press', 2, 'Bedsheet/Table Cloths/Curtain', 6, '5.00', '100.00', '2024-11-25', '2024-11-24', '18:15:24', 'completed', 'Delivered'),
+(121, 125, 'ord_674484338f618', 'Sza Basillio Ibarra', '09475348888', 1, 'Wash/Dry/Fold', 1, 'Clothes/Table Napkins/Pillowcase', 1, '7.00', '35.00', '2024-11-29', '2024-11-25', '22:05:39', 'completed', 'Pending'),
+(122, 126, 'ord_6744964a2a99a', 'Cueshe', '09395875878', 1, 'Wash/Dry/Fold', 2, 'Bedsheet/Table Cloths/Curtain', 1, '7.00', '45.00', '2024-11-25', '2024-11-25', '23:22:50', 'completed', 'Delivered'),
+(123, 127, 'ord_67450f03dcc4d', 'Taylor Swap', '09503984594', 1, 'Wash/Dry/Fold', 1, 'Clothes/Table Napkins/Pillowcase', 1, '9.00', '35.00', '2024-11-27', '2024-11-26', '07:57:55', 'completed', 'Delivered'),
+(124, 128, 'ord_6745120ed8da3', 'Elvis', '09387887432', 2, 'Wash/Dry/Press', 1, 'Clothes/Table Napkins/Pillowcase', 2, '6.00', '80.00', '2024-11-29', '2024-11-26', '08:10:54', 'completed', 'Pending'),
+(125, 129, 'ord_67455c89bae58', 'Eleanor Palomo', '09089987897', 1, 'Wash/Dry/Fold', 1, 'Clothes/Table Napkins/Pillowcase', 3, '6.00', '35.00', '2024-11-29', '2024-11-26', '13:28:41', 'completed', 'Pending'),
+(126, 130, 'ord_67458a4ea337a', 'Alexis Aballa', '09898987878', 1, 'Wash/Dry/Fold', 1, 'Clothes/Table Napkins/Pillowcase', 4, '7.00', '35.00', '2024-11-29', '2024-11-26', '16:43:58', 'completed', 'Pending'),
+(127, 119, 'ord_6745d92384351', 'Christian Serratos', '09089898909', 2, 'Wash/Dry/Press', 1, 'Clothes/Table Napkins/Pillowcase', 5, '6.00', '80.00', '2024-11-27', '2024-11-26', '22:20:19', 'completed', 'Claimed'),
+(128, 131, 'ord_6746986e62acc', 'Marie Dela Cruz', '09987675789', 1, 'Wash/Dry/Fold', 1, 'Clothes/Table Napkins/Pillowcase', 2, '8.00', '35.00', '2024-11-28', '2024-11-27', '11:56:30', 'completed', 'Pending');
 
 -- --------------------------------------------------------
 
@@ -692,7 +713,18 @@ INSERT INTO `transaction` (`transaction_id`, `request_id`, `customer_id`, `custo
 (85, 113, 118, 'Sadie Sink', 'bulacan', 'sjdm', 'Hollywood Street', 'Muzon South', 2, 'Customer Pick-Up', 'Standard', '175.00', '0.00', '0.00', '200.00', '25.00'),
 (86, 114, 119, 'Christian Serratos', 'bulacan', 'sjdm', 'Gumamela street', 'Muzon South', 2, 'Customer Pick-Up', 'Rush', '465.00', '0.00', '25.00', '500.00', '35.00'),
 (87, 115, 120, 'Glinda', 'bulacan', 'sjdm', 'Oz University heights', 'San Roque', 1, 'Delivery', 'Standard', '325.00', '50.00', '0.00', '500.00', '175.00'),
-(88, 116, 121, 'Elphaba', 'bulacan', 'sjdm', 'Oz University Heights\n', 'Kaybanban', 2, 'Customer Pick-Up', 'Standard', '600.00', '0.00', '0.00', '600.00', '0.00');
+(88, 116, 121, 'Elphaba', 'bulacan', 'sjdm', 'Oz University Heights\n', 'Kaybanban', 2, 'Customer Pick-Up', 'Standard', '600.00', '0.00', '0.00', '600.00', '0.00'),
+(89, 118, 123, 'Migoy Dela Cruz', 'bulacan', 'sjdm', 'Sarmiento Street', 'Kaypian', 1, 'Delivery', 'Rush', '390.00', '50.00', '25.00', '500.00', '110.00'),
+(90, 119, 123, 'Migoy Dela Cruz', 'bulacan', 'sjdm', 'Sarmiento street', 'Kaypian', 2, 'Customer Pick-Up', 'Rush', '235.00', '0.00', '25.00', '500.00', '265.00'),
+(91, 120, 124, 'Barry Keoghan', 'bulacan', 'sjdm', 'Pulang Dos Subdivision', 'Maharlika', 1, 'Delivery', 'Rush', '575.00', '50.00', '25.00', '600.00', '25.00'),
+(92, 121, 125, 'Sza Basillio Ibarra', '', '', '', '', 2, 'Customer Pick-Up', 'Rush', '270.00', '0.00', '25.00', '500.00', '230.00'),
+(93, 122, 126, 'Cueshe', 'bulacan', 'sjdm', 'pasensya na', 'Ciudad Real', 1, 'Delivery', 'Rush', '390.00', '50.00', '25.00', '500.00', '110.00'),
+(94, 123, 127, 'Taylor Swap', 'bulacan', 'sjdm', 'cornelia street', 'Maharlika', 1, 'Delivery', 'Rush', '390.00', '50.00', '25.00', '500.00', '110.00'),
+(95, 124, 128, 'Elvis', '', '', '', '', 2, 'Customer Pick-Up', 'Standard', '480.00', '0.00', '0.00', '500.00', '20.00'),
+(96, 125, 129, 'Eleanor Palomo', 'bulacan', 'sjdm', 'Sarmiento campus', 'Gumaoc East', 1, 'Delivery', 'Rush', '285.00', '50.00', '25.00', '300.00', '15.00'),
+(97, 126, 130, 'Alexis Aballa', 'bulacan', 'sjdm', 'Sarmiento', 'Gaya-gaya', 1, 'Delivery', 'Rush', '295.00', '25.00', '25.00', '500.00', '205.00'),
+(98, 127, 119, 'Christian Serratos', 'bulacan', 'sjdm', 'Gumamela Street', 'Muzon South', 1, 'Delivery', 'Rush', '555.00', '50.00', '25.00', '600.00', '45.00'),
+(99, 128, 131, 'Marie Dela Cruz', 'bulacan', 'sjdm', 'Sarmiento', 'Gaya-gaya', 1, 'Delivery', 'Rush', '330.00', '25.00', '25.00', '500.00', '170.00');
 
 -- --------------------------------------------------------
 
@@ -723,12 +755,13 @@ INSERT INTO `user` (`user_id`, `username`, `first_name`, `last_name`, `user_role
 (42, 'msc43', 'mascaraa', 'haws', 'admin', '', '2024-08-22 16:00:57', 'Inactive', '', '', '2024-08-22 16:00:57'),
 (45, 'mascara12', 'mascara', 'cdh', 'admin', '$2y$10$g8v', '2024-08-28 22:22:20', 'Inactive', '', '', '2024-08-28 22:22:20'),
 (63, 'MaggieGreene', 'Maggie', 'Greene', 'admin', '$2y$10$gL7C7FnTEX5qAq3Xvh3gZuH9exjSUKK0nd4vxvyPQ3X.aGbsMY05O', '2024-11-15 13:57:56', 'Active', '', '', '2024-10-05 22:23:50'),
-(64, 'Ariana Butera', 'Ariana', 'Butera', 'staff', '$2y$10$MIiAilu.k73bYBiczjgzpep3XVNvcGPN6AypViZdp3si4rW5sxhjC', '2024-10-05 22:43:51', 'Inactive', '', '', '2024-10-05 22:43:51'),
+(64, 'ArianaButera', 'Ariana', 'Butera', 'staff', '$2y$10$MIiAilu.k73bYBiczjgzpep3XVNvcGPN6AypViZdp3si4rW5sxhjC', '2024-11-25 21:50:24', 'Active', '', '', '2024-10-05 22:43:51'),
 (65, 'mkyg', 'milky', 'grande', 'admin', '$2y$10$vAUCI6A//eF5N1r5cHoX..iueBMkB46Hj0YCh8342r8l1TxlihNim', '2024-10-24 01:17:56', 'Inactive', '', '', '2024-10-24 01:17:56'),
-(66, 'Tintin', 'Christine', 'Haduca', 'admin', '$2y$10$/e69dBhhIaozerLj28t7eOvrxjmGwyjAl3NIZ7OfbsPxBWi/1lThi', '2024-11-23 16:46:38', 'Active', '', '', '2024-11-03 22:28:15'),
+(66, 'Tintin', 'Christine', 'Haduca', 'admin', '$2y$10$/e69dBhhIaozerLj28t7eOvrxjmGwyjAl3NIZ7OfbsPxBWi/1lThi', '2024-11-27 11:58:23', 'Active', '', '', '2024-11-03 22:28:15'),
 (67, 'Tin', 'Tin', 'Hdc', 'admin', '$2y$10$M1RnI4O8B0L46utW5tXz2uLWid6FILo.HkYEXAgPK3.6L0XnOEJom', '2024-11-06 16:40:52', 'Active', 'What year were you born?', '$2y$10$4mbziMKzzuyNqOmLZMGnIOE14hGHbSWI2/4xx7Qi7lu2TNH8pMSCy', '2024-11-06 16:40:52'),
 (79, 'NickiMinaj', 'Nicki', 'Minaj', 'staff', '$2y$10$qISkB5cmAOxFYuAveMMfhO0yNzg/7Edwgtyp9zWuwIcnKuOfLYH3S', '2024-11-15 15:50:45', 'Active', 'What year were you born?', '$2y$10$FHv4urbOcPHue8CwYQn33.7SU3YrIQHcM1mMn8L4EmiZXNhTJTysy', '2024-11-15 11:04:59'),
-(90, 'deyn', 'Danielle', 'Dela Cruz', 'admin', '$2y$10$KLgWTsZAgYmatav83HV7o.652sX5xH9aRGZielKVnz5B08BsxlPNm', '2024-11-20 22:18:58', 'Active', 'What year were you born?', '$2y$10$9iVYiHT7D1nuqwMuSixxzej2IwwH3XXEhS0c2mzNW1akU8/to67mu', '2024-11-20 22:18:58');
+(90, 'deyn', 'Danielle', 'Dela Cruz', 'admin', '$2y$10$KLgWTsZAgYmatav83HV7o.652sX5xH9aRGZielKVnz5B08BsxlPNm', '2024-11-20 22:18:58', 'Active', 'What year were you born?', '$2y$10$9iVYiHT7D1nuqwMuSixxzej2IwwH3XXEhS0c2mzNW1akU8/to67mu', '2024-11-20 22:18:58'),
+(93, 'MuningSantos', 'Muning', 'Santos', 'staff', '$2y$10$1fYZJD0014CG0zHSuRJxWOrsZLVSwK9039nDNNRuCqqCXA./lYJc2', '2024-11-27 12:02:46', 'Active', 'What year were you born?', '$2y$10$Ud3dpQ4UcwIdQ9ORZcxDI.QdZlAY4UgD8pqGlSx6KllqJFwAwrZx2', '2024-11-27 12:02:46');
 
 -- --------------------------------------------------------
 
@@ -759,25 +792,29 @@ INSERT INTO `user_profile` (`profile_id`, `user_id`, `username`, `password`, `us
 -- Indexes for table `archived_category`
 --
 ALTER TABLE `archived_category`
-  ADD PRIMARY KEY (`archive_id`);
+  ADD PRIMARY KEY (`archive_id`),
+  ADD KEY `category_id` (`category_id`);
 
 --
 -- Indexes for table `archived_customers`
 --
 ALTER TABLE `archived_customers`
-  ADD PRIMARY KEY (`archive_id`);
+  ADD PRIMARY KEY (`archive_id`),
+  ADD KEY `customer_id` (`customer_id`);
 
 --
 -- Indexes for table `archived_service`
 --
 ALTER TABLE `archived_service`
-  ADD PRIMARY KEY (`archive_id`);
+  ADD PRIMARY KEY (`archive_id`),
+  ADD KEY `service_id` (`service_id`);
 
 --
 -- Indexes for table `archived_users`
 --
 ALTER TABLE `archived_users`
-  ADD PRIMARY KEY (`archive_id`);
+  ADD PRIMARY KEY (`archive_id`),
+  ADD KEY `user_id` (`user_id`);
 
 --
 -- Indexes for table `category`
@@ -807,7 +844,9 @@ ALTER TABLE `service`
 -- Indexes for table `service_category_price`
 --
 ALTER TABLE `service_category_price`
-  ADD PRIMARY KEY (`id`);
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `service_id` (`service_id`),
+  ADD KEY `category_id` (`category_id`);
 
 --
 -- Indexes for table `service_options`
@@ -819,7 +858,9 @@ ALTER TABLE `service_options`
 -- Indexes for table `service_option_price`
 --
 ALTER TABLE `service_option_price`
-  ADD PRIMARY KEY (`option_price_id`);
+  ADD PRIMARY KEY (`option_price_id`),
+  ADD KEY `option_id` (`option_id`),
+  ADD KEY `d_categoryID` (`d_categoryID`);
 
 --
 -- Indexes for table `service_request`
@@ -837,7 +878,8 @@ ALTER TABLE `settings`
 -- Indexes for table `transaction`
 --
 ALTER TABLE `transaction`
-  ADD PRIMARY KEY (`transaction_id`);
+  ADD PRIMARY KEY (`transaction_id`),
+  ADD KEY `request_id` (`request_id`);
 
 --
 -- Indexes for table `user`
@@ -860,37 +902,37 @@ ALTER TABLE `user_profile`
 -- AUTO_INCREMENT for table `archived_category`
 --
 ALTER TABLE `archived_category`
-  MODIFY `archive_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `archive_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
 -- AUTO_INCREMENT for table `archived_customers`
 --
 ALTER TABLE `archived_customers`
-  MODIFY `archive_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=30;
+  MODIFY `archive_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=35;
 
 --
 -- AUTO_INCREMENT for table `archived_service`
 --
 ALTER TABLE `archived_service`
-  MODIFY `archive_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `archive_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- AUTO_INCREMENT for table `archived_users`
 --
 ALTER TABLE `archived_users`
-  MODIFY `archive_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=31;
+  MODIFY `archive_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=33;
 
 --
 -- AUTO_INCREMENT for table `category`
 --
 ALTER TABLE `category`
-  MODIFY `category_id` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
+  MODIFY `category_id` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
 
 --
 -- AUTO_INCREMENT for table `customer`
 --
 ALTER TABLE `customer`
-  MODIFY `customer_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=123;
+  MODIFY `customer_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=132;
 
 --
 -- AUTO_INCREMENT for table `delivery_category`
@@ -902,13 +944,13 @@ ALTER TABLE `delivery_category`
 -- AUTO_INCREMENT for table `service`
 --
 ALTER TABLE `service`
-  MODIFY `service_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
+  MODIFY `service_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
 
 --
 -- AUTO_INCREMENT for table `service_category_price`
 --
 ALTER TABLE `service_category_price`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
 
 --
 -- AUTO_INCREMENT for table `service_options`
@@ -926,7 +968,7 @@ ALTER TABLE `service_option_price`
 -- AUTO_INCREMENT for table `service_request`
 --
 ALTER TABLE `service_request`
-  MODIFY `request_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=118;
+  MODIFY `request_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=129;
 
 --
 -- AUTO_INCREMENT for table `settings`
@@ -938,13 +980,13 @@ ALTER TABLE `settings`
 -- AUTO_INCREMENT for table `transaction`
 --
 ALTER TABLE `transaction`
-  MODIFY `transaction_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=89;
+  MODIFY `transaction_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=100;
 
 --
 -- AUTO_INCREMENT for table `user`
 --
 ALTER TABLE `user`
-  MODIFY `user_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=91;
+  MODIFY `user_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=94;
 
 --
 -- AUTO_INCREMENT for table `user_profile`
